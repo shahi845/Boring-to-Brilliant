@@ -1,0 +1,10 @@
+# Supabase CLI project config (used by `supabase link` / `supabase db push`).
+project_id = "ourcampus"
+
+[auth]
+# Accounts are created by the college only — no public sign-up.
+enable_signup = false
+
+[auth.email]
+enable_signup = false
+enable_confirmations = false
