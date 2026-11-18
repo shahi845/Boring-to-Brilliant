@@ -45,7 +45,10 @@ export const REQ_ICON = {
   'Attendance Correction': '🛠️',
   'Library Clearance': '📚',
   Other: '📝',
+  'Book Issue': '📖',
 };
+/** Raised from the library scene (not from the Official Requests picker); handled by the Librarian. */
+export const BOOK_ISSUE = 'Book Issue';
 export const HANDLERS = ['Admin office', 'Academic Assistant', 'Librarian'];
 export const AUTHORITY = ['Principal & Vice Principal', 'Principal only', 'Vice Principal only'];
 export const ICONS = {

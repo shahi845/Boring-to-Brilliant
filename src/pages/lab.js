@@ -8,6 +8,8 @@ import { S } from '../state.js';
 import { btn, call, calm, card, heading, itemRow, tabs, tag } from '../ui/components.js';
 import { confirmBox, mhead, modal, toast } from '../ui/feedback.js';
 import { commit } from '../ui/forms.js';
+import { labSceneConfirm, labSceneMarkup, labSceneReset, labSceneSeat } from '../scene/lab-controller.js';
+export { labSceneConfirm, labSceneReset, labSceneSeat };
 /* ==========================================================================
    COMPUTER LAB — 40 seats, no double booking
    ========================================================================== */
@@ -68,8 +70,7 @@ export function seatMap(mode) {
 }
 PAGES['Lab Pass'] = () => {
   const h = heading('Lab pass', '40 seats in the computer lab. Pick one in seconds.') + tabs();
-  if (S.section === 'Seat Map')
-    return h + labStats() + `<div style="margin-top:16px">${seatMap('book')}</div>`;
+  if (S.section === 'Seat Map') return h + labStats() + labSceneMarkup(labCtx);
   const p = myPass(),
     hist = S.db.lab.bookings
       .filter(b => b.studentId === me().id && b !== p)
@@ -78,7 +79,7 @@ PAGES['Lab Pass'] = () => {
   return (
     h +
     (p
-      ? `<div class="ticket ${p.status === 'Requested' ? 'req' : ''}"><div class="stub"><span>SEAT</span><strong>${p.seat}</strong></div><div class="body"><div class="hero-eyebrow">💻 COMPUTER LAB · ${esc(fmtDate(p.date)).toUpperCase()}</div><h2 style="margin:6px 0">${p.status === 'Requested' ? 'Waiting for the Lab Charge' : 'Your pass is active'}</h2><p style="margin:0 0 12px">${p.status === 'Requested' ? 'Your seat is held while the request is reviewed.' : 'Show this screen if asked. Valid for today only.'}</p>${btn('Cancel pass', call('cancelPass', p.id), 'sm')}</div></div>`
+      ? labPassHTML(p, false, true)
       : calm('💻', 'No pass for today', '', btn('Choose a seat', "go('Lab Pass','Seat Map')", 'primary'))) +
     (hist.length
       ? card(
@@ -91,6 +92,89 @@ PAGES['Lab Pass'] = () => {
       : '')
   );
 };
+/* ---------- digital lab pass + scene context ---------- */
+function passCode(p) {
+  let h = 2166136261;
+  for (const ch of `${p.id}|${p.seat}|${p.date}|${p.studentId}`)
+    h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  let cells = '';
+  for (let y = 0; y < 9; y++)
+    for (let x = 0; x < 9; x++) {
+      const fx = x < 3 ? 0 : x > 5 ? 6 : -1,
+        fy = y < 3 ? 0 : y > 5 ? 6 : -1,
+        finder = fx >= 0 && fy >= 0 && !(fx === 6 && fy === 6);
+      h = Math.imul(h ^ (x * 31 + y + 7), 2246822519) >>> 0;
+      if (finder && x === fx + 1 && y === fy + 1) continue; // hollow centre of each corner marker
+      if (finder || h % 3 === 0) cells += `<rect x="${x * 6}" y="${y * 6}" width="6" height="6" rx="1.2"/>`;
+    }
+  return `<svg class="lp-code" viewBox="-4 -4 62 62" aria-hidden="true"><rect x="-4" y="-4" width="62" height="62" rx="9" fill="#fff"/><g fill="#18233c">${cells}</g></svg>`;
+}
+export function labPassHTML(p, fresh = false, full = false) {
+  const s = me(),
+    req = p.status === 'Requested';
+  return `<div class="labpass ${req ? 'req' : ''} ${fresh ? 'pop' : ''}" role="group" aria-label="Lab pass for seat ${p.seat}">
+<div class="lp-stub"><span>SEAT</span><strong>${p.seat}</strong><small>${req ? 'HELD' : 'ACTIVE'}</small></div>
+<div class="lp-body"><div class="hero-eyebrow">💻 COMPUTER LAB · ${esc(fmtDate(p.date)).toUpperCase()}</div>
+<h2>${fresh ? (req ? 'Seat requested! 🙌' : 'Seat booked! 🎉') : req ? 'Waiting for the Lab Charge' : 'Your pass is active'}</h2>
+<p>${esc(s?.name || '')}${s?.class ? ' · ' + esc(s.class) : ''}<br><span class="muted">${req ? 'Your seat is held while the Lab Charge reviews the request.' : 'Show this pass if asked. Valid for today only.'}</span></p>
+<div class="formactions">${full ? '' : btn('Open My Pass', "go('Lab Pass','My Pass')", 'sm primary')}${btn('Cancel pass', call('cancelPass', p.id), 'sm')}</div></div>
+${passCode(p)}</div>`;
+}
+const labCtx = {
+  seats: () => {
+    const mine = myPass(),
+      out = [];
+    for (let n = 1; n <= 40; n++) {
+      const b = seatBooking(n);
+      out.push({
+        n,
+        state: S.db.lab.unavailable.includes(n)
+          ? 'unavailable'
+          : b && mine && b.id === mine.id
+            ? 'mine'
+            : b
+              ? b.status === 'Requested'
+                ? 'requested'
+                : 'occupied'
+              : 'free',
+      });
+    }
+    return out;
+  },
+  pass: () => myPass(),
+  mode: () => S.db.settings.labMode,
+  passHTML: (p, fresh) => labPassHTML(p, fresh),
+  book: n => bookNow(n),
+};
+/** Book a seat straight from the scene — sitting down to try the seat is the confirmation step. */
+export function bookNow(n) {
+  const fail = msg => (toast(msg, 'err'), msg);
+  if (S.db.lab.unavailable.includes(n)) return fail('Seat ' + n + ' is unavailable');
+  if (seatBooking(n)) return fail('Seat ' + n + ' was just taken — pick another');
+  if (myPass()) return fail('You already have a pass for today');
+  const inst = S.db.settings.labMode === 'Instant',
+    id = nextId(S.db.lab.bookings),
+    s = me(),
+    b = {
+      id,
+      seat: n,
+      studentId: s.id,
+      date: today(),
+      status: inst ? 'Active' : 'Requested',
+      createdAt: stamp(),
+    };
+  S.db.lab.bookings.push(b);
+  if (!inst)
+    notify('position:Lab Charge', s.name + ' requested lab seat ' + n, {
+      icon: '💻',
+      ref: 'lab:' + id,
+      action: true,
+      link: ['Computer Lab', 'Passes', 'lab:' + id],
+    });
+  save();
+  toast(inst ? 'Seat ' + n + ' is yours today 🎉' : 'Seat ' + n + ' requested');
+  return b;
+}
 export function bookSeat(n) {
   if (S.db.lab.unavailable.includes(n)) return toast('Seat ' + n + ' is unavailable', 'err');
   if (seatBooking(n)) return toast('Seat ' + n + ' was just taken — pick another', 'err');

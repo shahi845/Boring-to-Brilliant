@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -125 100 135" width="100" height="135"><title>Student pose: library-04-reaching-for-book</title><g id="student" transform="translate(0 0) scale(1)"><g transform="scale(1 1)">
+<g visibility="hidden"><g id="rig-front">
+<ellipse id="shadow" cx="0" cy="0" rx="16" ry="4.2" fill="#1c2c5926"/>
+<g id="bob">
+<g id="legs"><g id="upper-leg-l">
+<rect x="-10.5" y="-35" width="9" height="15" rx="4.5" fill="#34406b" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="lower-leg-l">
+<rect x="-10" y="-23" width="8" height="15" rx="4" fill="#2a3458" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="foot-l">
+<path d="M-14 -2 q0 -8 8 -8 q5 0 5 8 z" fill="#ffffff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-14" y="-2.4" width="13" height="3.2" rx="1.6" fill="#ff9600" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+</g></g></g><g id="upper-leg-r">
+<rect x="1.5" y="-35" width="9" height="15" rx="4.5" fill="#34406b" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="lower-leg-r">
+<rect x="2" y="-23" width="8" height="15" rx="4" fill="#2a3458" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="foot-r">
+<path d="M1 -2 q0 -8 5 -8 q8 0 8 8 z" fill="#ffffff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="1" y="-2.4" width="13" height="3.2" rx="1.6" fill="#ff9600" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+</g></g></g></g>
+<g id="body">
+<g id="torso"><rect x="-14" y="-63" width="28" height="33" rx="11" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M-6 -63 l6 6 l6 -6" fill="none" stroke="#ffc800" stroke-width="2" stroke-linecap="round"/>
+<path d="M0 -57 v6" stroke="#ffc800" stroke-width="2"/><rect x="-4" y="-52" width="8" height="10" rx="2" fill="#fff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><rect x="-2.4" y="-50" width="4.8" height="2.4" rx="1" fill="#0e9f9a"/>
+<path d="M-9 -38 h18 v4 q-9 3 -18 0 z" fill="#0b827e" opacity=".55"/></g><g id="upper-arm-l">
+<rect x="-18.5" y="-60" width="9" height="16" rx="4.5" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="forearm-l">
+<rect x="-18" y="-48" width="8" height="13" rx="4" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="hand-l">
+<circle cx="-14" cy="-33" r="4.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g></g>
+</g></g></g><g id="upper-arm-r">
+<rect x="9.5" y="-60" width="9" height="16" rx="4.5" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="forearm-r">
+<rect x="10" y="-48" width="8" height="13" rx="4" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="hand-r">
+<circle cx="14" cy="-33" r="4.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g></g>
+</g></g></g>
+<g id="head">
+<rect x="-4" y="-66" width="8" height="7" rx="3" fill="#e9a982" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="-15.5" cy="-77" r="3.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><circle cx="15.5" cy="-77" r="3.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="0" cy="-78" r="16" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M-16 -79 q-1 -16 14 -16 q17 -1 18 15 q-6 -8 -15 -7 q-5 5 -17 8 z" fill="#3a2a35" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><g id="face">
+<g><ellipse cx="-6" cy="-79" rx="2.3" ry="2.9" fill="#213049"/><ellipse cx="6" cy="-79" rx="2.3" ry="2.9" fill="#213049"/>
+<circle cx="-5.2" cy="-80" r=".8" fill="#fff"/><circle cx="6.8" cy="-80" r=".8" fill="#fff"/></g>
+<path d="M-9 -84.5 q3 -2 6 -.6 M3 -85.1 q3 -1.4 6 .6" fill="none" stroke="#3a2a35" stroke-width="1.6" stroke-linecap="round"/>
+<ellipse cx="-10.5" cy="-73.5" rx="3" ry="1.8" fill="#ff9eaa" opacity=".7"/><ellipse cx="10.5" cy="-73.5" rx="3" ry="1.8" fill="#ff9eaa" opacity=".7"/>
+<g><path d="M-5 -71.2 q5 5.5 10 0" fill="none" stroke="#213049" stroke-width="1.8" stroke-linecap="round"/></g></g>
+</g>
+</g></g></g></g>
+<g><g id="rig-back">
+<ellipse id="shadow" cx="0" cy="0" rx="16" ry="4.2" fill="#1c2c5926"/>
+<g id="bob" transform="translate(0 -2)">
+<g id="legs"><g id="upper-leg-l">
+<rect x="-10.5" y="-35" width="9" height="15" rx="4.5" fill="#34406b" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="lower-leg-l">
+<rect x="-10" y="-23" width="8" height="15" rx="4" fill="#2a3458" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="foot-l">
+<path d="M-14 -2 q0 -8 8 -8 q5 0 5 8 z" fill="#ffffff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-14" y="-2.4" width="13" height="3.2" rx="1.6" fill="#ff9600" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+</g></g></g><g id="upper-leg-r">
+<rect x="1.5" y="-35" width="9" height="15" rx="4.5" fill="#34406b" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="lower-leg-r">
+<rect x="2" y="-23" width="8" height="15" rx="4" fill="#2a3458" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="foot-r">
+<path d="M1 -2 q0 -8 5 -8 q8 0 8 8 z" fill="#ffffff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="1" y="-2.4" width="13" height="3.2" rx="1.6" fill="#ff9600" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+</g></g></g></g>
+<g id="body">
+<g id="upper-arm-l" transform="rotate(6 -14 -57)">
+<rect x="-18.5" y="-60" width="9" height="16" rx="4.5" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="forearm-l">
+<rect x="-18" y="-48" width="8" height="13" rx="4" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="hand-l">
+<circle cx="-14" cy="-33" r="4.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g></g>
+</g></g></g><g id="upper-arm-r" transform="rotate(-161.55 14 -57)">
+<rect x="9.5" y="-60" width="9" height="16" rx="4.5" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="forearm-r" transform="rotate(-8 14 -46)">
+<rect x="10" y="-48" width="8" height="13" rx="4" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="hand-r">
+<circle cx="14" cy="-33" r="4.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g></g>
+</g></g></g><g id="torso"><rect x="-14" y="-63" width="28" height="33" rx="11" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M-9 -63 q9 9 18 0" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><path d="M-11 -40 h22" stroke="#0b827e" stroke-width="2" stroke-linecap="round"/></g>
+<g id="head" transform="rotate(-6 0 -62)">
+<rect x="-4" y="-66" width="8" height="7" rx="3" fill="#e9a982" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="-15.5" cy="-77" r="3.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><circle cx="15.5" cy="-77" r="3.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="0" cy="-78" r="16" fill="#3a2a35" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M-13 -70 q13 7 26 0" fill="none" stroke="#213049" stroke-width="1.2" opacity=".35"/><path d="M-6 -92 q6 -5 12 0" fill="none" stroke="#ffffff" stroke-width="1.6" opacity=".25" stroke-linecap="round"/>
+</g>
+</g></g></g></g>
+</g></g></svg>

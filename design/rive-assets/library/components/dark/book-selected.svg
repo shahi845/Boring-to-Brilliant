@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -6 46 84" width="46" height="84"><title>Book component — selected</title><g id="book-B-002">
+<g transform="translate(0 -8)">
+<rect x="6" y="6" width="34" height="64" rx="6" fill="#ffc80055" stroke="#ffc800" stroke-width="3"/>
+<rect x="10" y="10" width="26" height="56" rx="3" fill="#a56cf0" stroke="#0b1020" stroke-width="1.3"/>
+<rect x="11.6" y="16" width="22.8" height="3" fill="#ffffff" opacity="0.6"/>
+<rect x="11.6" y="56" width="22.8" height="3" fill="#ffffff" opacity="0.6"/>
+<rect x="20.4" y="29" width="5.2" height="18" rx="2" fill="#ffffff" opacity="0.42"/>
+
+
+</g></g></svg>

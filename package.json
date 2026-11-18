@@ -15,7 +15,8 @@
     "test:db": "sh tests/db/run.sh",
     "format": "prettier --write \"src/**/*.{js,css}\" \"server/**/*.js\" \"tests/**/*.js\" index.html",
     "lint": "prettier --check \"src/**/*.{js,css}\" \"server/**/*.js\" \"tests/**/*.js\"",
-    "accounts:create": "node --env-file=.env server/scripts/create-accounts.mjs"
+    "accounts:create": "node --env-file=.env server/scripts/create-accounts.mjs",
+    "design:export": "node scripts/export-design.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.47.10"

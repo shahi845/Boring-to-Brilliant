@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 458 1430" width="458" height="1430"><title>Computer lab room (mobile)</title>
+<g id="room-background">
+<rect width="458" height="1430" fill="#141c2e"/><path d="M0 172 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 212 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 252 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 292 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 332 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 372 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 412 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 452 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 492 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 532 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 572 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 612 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 652 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 692 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 732 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 772 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 812 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 852 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 892 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 932 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 972 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1012 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1052 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1092 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1132 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1172 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1212 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1252 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1292 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1332 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1372 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1412 H458" stroke="#1e2940" stroke-width="2"/><path d="M40 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M120 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M200 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M280 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M360 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M440 132 V1430" stroke="#1e2940" stroke-width="2"/>
+<rect width="458" height="132" fill="#1b2a3a"/>
+<path d="M0 86 H458" stroke="#22364a" stroke-width="3"/>
+<rect y="122" width="458" height="10" fill="#24405a"/>
+<g id="whiteboard"><rect x="24" y="22" width="139" height="78" rx="10" fill="#e9eef8" stroke="#4a5876" stroke-width="5"/>
+<path d="M42 46 h58.379999999999995 M42 62 h41.699999999999996 M42 78 h69.5" stroke="#1cb0f6" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+<text x="145" y="70" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="900" fill="#22b98b">&lt;/&gt;</text></g>
+<g id="window-1"><rect x="299.5" y="26" width="130" height="72" rx="10" fill="#1f3f66" stroke="#4a5876" stroke-width="5"/>
+<ellipse cx="345" cy="58" rx="22.1" ry="7" fill="#5e7aa3"/><ellipse cx="364.5" cy="52" rx="16.900000000000002" ry="9" fill="#5e7aa3"/>
+<path d="M364.5 26 V98" stroke="#4a5876" stroke-width="4"/></g>
+<g id="entrance-door">
+<rect x="191" y="26" width="76" height="110" rx="8" fill="#5b55e8" stroke="#0b1020" stroke-width="1.5"/>
+<rect x="199" y="34" width="60" height="98" rx="4" fill="#05070f"/><path d="M199 34 L183 42 V136 L199 132" fill="#7c6cf0" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="177" y="4" width="104" height="18" rx="9" fill="#0e9f9a"/>
+<text x="229" y="17" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="900" letter-spacing="1" fill="#ffffff">COMPUTER LAB</text>
+<rect x="189" y="138" width="80" height="16" rx="8" fill="#2a2858" stroke="#36337a" stroke-width="2"/>
+</g>
+<g id="plant"><rect x="412" y="102" width="24" height="22" rx="5" fill="#ff9600"/><ellipse cx="418" cy="92" rx="9" ry="14" fill="#58cc02"/><ellipse cx="430" cy="90" rx="8" ry="13" fill="#46a302"/></g>
+<rect id="aisle" x="207" y="158" width="44" height="1268" rx="22" fill="#2a2858" opacity=".55"/>
+</g>
+<g id="seats"></g>
+<g id="walker"></g>
+<g id="fx"></g>
+</svg>

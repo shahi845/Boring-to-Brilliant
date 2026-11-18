@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 458 1430" width="458" height="1430"><title>Computer lab — 03-walking-preview (mobile, dark)</title>
+<g id="room-background">
+<rect width="458" height="1430" fill="#141c2e"/><path d="M0 172 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 212 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 252 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 292 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 332 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 372 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 412 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 452 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 492 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 532 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 572 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 612 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 652 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 692 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 732 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 772 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 812 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 852 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 892 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 932 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 972 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1012 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1052 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1092 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1132 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1172 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1212 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1252 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1292 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1332 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1372 H458" stroke="#1e2940" stroke-width="2"/><path d="M0 1412 H458" stroke="#1e2940" stroke-width="2"/><path d="M40 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M120 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M200 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M280 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M360 132 V1430" stroke="#1e2940" stroke-width="2"/><path d="M440 132 V1430" stroke="#1e2940" stroke-width="2"/>
+<rect width="458" height="132" fill="#1b2a3a"/>
+<path d="M0 86 H458" stroke="#22364a" stroke-width="3"/>
+<rect y="122" width="458" height="10" fill="#24405a"/>
+<g id="whiteboard"><rect x="24" y="22" width="139" height="78" rx="10" fill="#e9eef8" stroke="#4a5876" stroke-width="5"/>
+<path d="M42 46 h58.379999999999995 M42 62 h41.699999999999996 M42 78 h69.5" stroke="#1cb0f6" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+<text x="145" y="70" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="900" fill="#22b98b">&lt;/&gt;</text></g>
+<g id="window-1"><rect x="299.5" y="26" width="130" height="72" rx="10" fill="#1f3f66" stroke="#4a5876" stroke-width="5"/>
+<ellipse cx="345" cy="58" rx="22.1" ry="7" fill="#5e7aa3"/><ellipse cx="364.5" cy="52" rx="16.900000000000002" ry="9" fill="#5e7aa3"/>
+<path d="M364.5 26 V98" stroke="#4a5876" stroke-width="4"/></g>
+<g id="entrance-door">
+<rect x="191" y="26" width="76" height="110" rx="8" fill="#5b55e8" stroke="#0b1020" stroke-width="1.5"/>
+<rect x="199" y="34" width="60" height="98" rx="4" fill="#05070f"/><path d="M199 34 L183 42 V136 L199 132" fill="#7c6cf0" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="177" y="4" width="104" height="18" rx="9" fill="#0e9f9a"/>
+<text x="229" y="17" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="900" letter-spacing="1" fill="#ffffff">COMPUTER LAB</text>
+<rect x="189" y="138" width="80" height="16" rx="8" fill="#2a2858" stroke="#36337a" stroke-width="2"/>
+</g>
+<g id="plant"><rect x="412" y="102" width="24" height="22" rx="5" fill="#ff9600"/><ellipse cx="418" cy="92" rx="9" ry="14" fill="#58cc02"/><ellipse cx="430" cy="90" rx="8" ry="13" fill="#46a302"/></g>
+<rect id="aisle" x="207" y="158" width="44" height="1268" rx="22" fill="#2a2858" opacity=".55"/>
+</g>
+<g id="seats"><g id="seat-1">
+<rect x="21" y="166" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="260" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-1">
+<rect x="29" y="220" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="220" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="198" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="212" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-1">
+<rect x="57" y="190" width="6" height="10" fill="#5a6680"/><rect x="50" y="198" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="170" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="173" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="183" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="203" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="206" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-1">
+<rect x="58" y="248" width="4" height="7" fill="#5a6680"/><rect x="48" y="253" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="228" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="232" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-1">
+<rect x="41" y="262" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="277" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">1</text>
+</g>
+</g><g id="seat-2">
+<rect x="105" y="166" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="144" cy="260" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-2">
+<rect x="113" y="220" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="220" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="198" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="212" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-2">
+<rect x="141" y="190" width="6" height="10" fill="#5a6680"/><rect x="134" y="198" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="170" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="173" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="144" cy="183" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="130" y="203" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="206" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-2">
+<rect x="142" y="248" width="4" height="7" fill="#5a6680"/><rect x="132" y="253" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="228" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="232" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-2">
+<rect x="125" y="262" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="277" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">2</text>
+</g>
+</g><g id="seat-3">
+<rect x="275" y="166" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="260" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-3">
+<rect x="283" y="220" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="220" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="198" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="212" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-3">
+<rect x="311" y="190" width="6" height="10" fill="#5a6680"/><rect x="304" y="198" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="170" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="173" width="36" height="20" rx="2.5" fill="#1cb0f6"/>
+<g fill="#ffffff" opacity=".85"><rect x="300" y="177" width="14" height="2.4" rx="1.2"/><rect x="300" y="181.5" width="22" height="2.4" rx="1.2"/><rect x="304" y="186" width="12" height="2.4" rx="1.2"/></g>
+<rect x="300" y="203" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="206" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-3">
+<rect x="312" y="248" width="4" height="7" fill="#5a6680"/><rect x="302" y="253" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="228" width="28" height="22" rx="8" fill="#e66f7c" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="232" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-3">
+<rect x="295" y="262" width="38" height="21" rx="10.5" fill="#e66f7c" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="277" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">3</text>
+</g>
+</g><g id="seat-4">
+<rect x="359" y="166" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="260" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-4">
+<rect x="367" y="220" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="220" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="198" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="212" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-4">
+<rect x="395" y="190" width="6" height="10" fill="#5a6680"/><rect x="388" y="198" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="170" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="173" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="398" cy="183" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="384" y="203" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="206" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-4">
+<rect x="396" y="248" width="4" height="7" fill="#5a6680"/><rect x="386" y="253" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="228" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="232" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-4">
+<rect x="379" y="262" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="277" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">4</text>
+</g>
+</g><g id="seat-5">
+<rect x="21" y="290" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="384" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-5">
+<rect x="29" y="344" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="344" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="322" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="336" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-5">
+<rect x="57" y="314" width="6" height="10" fill="#5a6680"/><rect x="50" y="322" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="294" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="297" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="307" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="327" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="330" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-5">
+<rect x="58" y="372" width="4" height="7" fill="#5a6680"/><rect x="48" y="377" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="352" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="356" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-5">
+<rect x="41" y="386" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="401" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">5</text>
+</g>
+</g><g id="seat-6">
+<rect x="105" y="290" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="144" cy="384" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-6">
+<rect x="113" y="344" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="344" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="322" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="336" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-6">
+<rect x="141" y="314" width="6" height="10" fill="#5a6680"/><rect x="134" y="322" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="294" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="297" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="144" cy="307" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="130" y="327" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="330" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-6">
+<rect x="142" y="372" width="4" height="7" fill="#5a6680"/><rect x="132" y="377" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="352" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="356" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-6">
+<rect x="125" y="386" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="401" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">6</text>
+</g>
+</g><g id="seat-7">
+<rect x="275" y="290" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="384" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-7">
+<rect x="283" y="344" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="344" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="322" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="336" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-7">
+<rect x="311" y="314" width="6" height="10" fill="#5a6680"/><rect x="304" y="322" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="294" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="297" width="36" height="20" rx="2.5" fill="#1cb0f6"/>
+<g fill="#ffffff" opacity=".85"><rect x="300" y="301" width="14" height="2.4" rx="1.2"/><rect x="300" y="305.5" width="22" height="2.4" rx="1.2"/><rect x="304" y="310" width="12" height="2.4" rx="1.2"/></g>
+<rect x="300" y="327" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="330" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-7">
+<rect x="312" y="372" width="4" height="7" fill="#5a6680"/><rect x="302" y="377" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="352" width="28" height="22" rx="8" fill="#e66f7c" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="356" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-7">
+<rect x="295" y="386" width="38" height="21" rx="10.5" fill="#e66f7c" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="401" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">7</text>
+</g>
+</g><g id="seat-8">
+<rect x="359" y="290" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="384" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-8">
+<rect x="367" y="344" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="344" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="322" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="336" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-8">
+<rect x="395" y="314" width="6" height="10" fill="#5a6680"/><rect x="388" y="322" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="294" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="297" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="398" cy="307" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="384" y="327" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="330" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-8">
+<rect x="396" y="372" width="4" height="7" fill="#5a6680"/><rect x="386" y="377" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="352" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="356" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-8">
+<rect x="379" y="386" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="401" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">8</text>
+</g>
+</g><g id="seat-9">
+<rect x="21" y="414" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="508" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-9">
+<rect x="29" y="468" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="468" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="446" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="460" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-9">
+<rect x="57" y="438" width="6" height="10" fill="#5a6680"/><rect x="50" y="446" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="418" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="421" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="431" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="451" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="454" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-9">
+<rect x="58" y="496" width="4" height="7" fill="#5a6680"/><rect x="48" y="501" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="476" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="480" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-9">
+<rect x="41" y="510" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="525" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">9</text>
+</g>
+</g><g id="seat-10">
+<rect x="105" y="414" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="144" cy="508" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-10">
+<rect x="113" y="468" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="468" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="446" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="460" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-10">
+<rect x="141" y="438" width="6" height="10" fill="#5a6680"/><rect x="134" y="446" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="418" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="421" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="144" cy="431" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="130" y="451" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="454" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-10">
+<rect x="142" y="496" width="4" height="7" fill="#5a6680"/><rect x="132" y="501" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="476" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="480" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-10">
+<rect x="125" y="510" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="525" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">10</text>
+</g>
+</g><g id="seat-11">
+<rect x="275" y="414" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="508" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-11">
+<rect x="283" y="468" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="468" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="446" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="460" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-11">
+<rect x="311" y="438" width="6" height="10" fill="#5a6680"/><rect x="304" y="446" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="418" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="421" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="314" cy="431" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="300" y="451" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="454" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-11">
+<rect x="312" y="496" width="4" height="7" fill="#5a6680"/><rect x="302" y="501" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="476" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="480" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-11">
+<rect x="295" y="510" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="525" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">11</text>
+</g>
+</g><g id="seat-12">
+<rect x="359" y="414" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="508" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-12">
+<rect x="367" y="468" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="468" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="446" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="460" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-12">
+<rect x="395" y="438" width="6" height="10" fill="#5a6680"/><rect x="388" y="446" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="418" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="421" width="36" height="20" rx="2.5" fill="#1cb0f6"/>
+<g fill="#ffffff" opacity=".85"><rect x="384" y="425" width="14" height="2.4" rx="1.2"/><rect x="384" y="429.5" width="22" height="2.4" rx="1.2"/><rect x="388" y="434" width="12" height="2.4" rx="1.2"/></g>
+<rect x="384" y="451" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="454" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-12">
+<rect x="396" y="496" width="4" height="7" fill="#5a6680"/><rect x="386" y="501" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="476" width="28" height="22" rx="8" fill="#e66f7c" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="480" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-12">
+<rect x="379" y="510" width="38" height="21" rx="10.5" fill="#e66f7c" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="525" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">12</text>
+</g>
+</g><g id="seat-13">
+<rect x="21" y="538" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="632" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-13">
+<rect x="29" y="592" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="592" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="570" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="584" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-13">
+<rect x="57" y="562" width="6" height="10" fill="#5a6680"/><rect x="50" y="570" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="542" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="545" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="555" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="575" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="578" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-13">
+<rect x="58" y="620" width="4" height="7" fill="#5a6680"/><rect x="48" y="625" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="600" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="604" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-13">
+<rect x="41" y="634" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="649" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">13</text>
+</g>
+</g><g id="seat-14">
+<rect x="105" y="538" width="78" height="118" rx="16" fill="#ffc80033" stroke="#ffc800" stroke-width="3"/>
+<ellipse cx="144" cy="632" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-14">
+<rect x="113" y="592" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="592" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="570" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="584" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-14">
+<rect x="141" y="562" width="6" height="10" fill="#5a6680"/><rect x="134" y="570" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="542" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="545" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="144" cy="555" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="130" y="575" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="578" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-14">
+<rect x="142" y="620" width="4" height="7" fill="#5a6680"/><rect x="132" y="625" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="600" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="604" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-14">
+<rect x="125" y="634" width="38" height="21" rx="10.5" fill="#ffc800" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="649" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#0b1020">14</text>
+</g>
+</g><g id="seat-15">
+<rect x="275" y="538" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="632" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-15">
+<rect x="283" y="592" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="592" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="570" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="584" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-15">
+<rect x="311" y="562" width="6" height="10" fill="#5a6680"/><rect x="304" y="570" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="542" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="545" width="36" height="20" rx="2.5" fill="#1cb0f6"/>
+<g fill="#ffffff" opacity=".85"><rect x="300" y="549" width="14" height="2.4" rx="1.2"/><rect x="300" y="553.5" width="22" height="2.4" rx="1.2"/><rect x="304" y="558" width="12" height="2.4" rx="1.2"/></g>
+<rect x="300" y="575" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="578" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-15">
+<rect x="312" y="620" width="4" height="7" fill="#5a6680"/><rect x="302" y="625" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="600" width="28" height="22" rx="8" fill="#1cb0f6" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="604" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-15">
+<rect x="295" y="634" width="38" height="21" rx="10.5" fill="#1cb0f6" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="649" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">15</text>
+</g>
+</g><g id="seat-16">
+<rect x="359" y="538" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="632" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-16">
+<rect x="367" y="592" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="592" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="570" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="584" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-16">
+<rect x="395" y="562" width="6" height="10" fill="#5a6680"/><rect x="388" y="570" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="542" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="545" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="398" cy="555" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="384" y="575" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="578" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-16">
+<rect x="396" y="620" width="4" height="7" fill="#5a6680"/><rect x="386" y="625" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="600" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="604" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-16">
+<rect x="379" y="634" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="649" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">16</text>
+</g>
+</g><g id="seat-17">
+<rect x="21" y="662" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="756" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-17">
+<rect x="29" y="716" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="716" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="694" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="708" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-17">
+<rect x="57" y="686" width="6" height="10" fill="#5a6680"/><rect x="50" y="694" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="666" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="669" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="679" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="699" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="702" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-17">
+<rect x="58" y="744" width="4" height="7" fill="#5a6680"/><rect x="48" y="749" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="724" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="728" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-17">
+<rect x="41" y="758" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="773" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">17</text>
+</g>
+</g><g id="seat-18">
+<rect x="105" y="662" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="144" cy="756" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-18">
+<rect x="113" y="716" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="716" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="694" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="708" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-18">
+<rect x="141" y="686" width="6" height="10" fill="#5a6680"/><rect x="134" y="694" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="666" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="669" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="144" cy="679" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="130" y="699" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="702" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-18">
+<rect x="142" y="744" width="4" height="7" fill="#5a6680"/><rect x="132" y="749" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="724" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="728" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-18">
+<rect x="125" y="758" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="773" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">18</text>
+</g>
+</g><g id="seat-19">
+<rect x="275" y="662" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="756" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-19">
+<rect x="283" y="716" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="716" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="694" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="708" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-19">
+<rect x="311" y="686" width="6" height="10" fill="#5a6680"/><rect x="304" y="694" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="666" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="669" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="314" cy="679" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="300" y="699" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="702" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-19">
+<rect x="312" y="744" width="4" height="7" fill="#5a6680"/><rect x="302" y="749" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="724" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="728" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-19">
+<rect x="295" y="758" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="773" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">19</text>
+</g>
+</g><g id="seat-20">
+<rect x="359" y="662" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="756" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-20">
+<rect x="367" y="716" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="716" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="694" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="708" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-20">
+<rect x="395" y="686" width="6" height="10" fill="#5a6680"/><rect x="388" y="694" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="666" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="669" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="398" cy="679" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="384" y="699" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="702" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-20">
+<rect x="396" y="744" width="4" height="7" fill="#5a6680"/><rect x="386" y="749" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="724" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="728" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-20">
+<rect x="379" y="758" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="773" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">20</text>
+</g>
+</g><g id="seat-21">
+<rect x="21" y="786" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="880" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-21">
+<rect x="29" y="840" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="840" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="818" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="832" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-21">
+<rect x="57" y="810" width="6" height="10" fill="#5a6680"/><rect x="50" y="818" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="790" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="793" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="803" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="823" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="826" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-21">
+<rect x="58" y="868" width="4" height="7" fill="#5a6680"/><rect x="48" y="873" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="848" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="852" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-21">
+<rect x="41" y="882" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="897" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">21</text>
+</g>
+</g><g id="seat-22">
+<rect x="105" y="786" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="144" cy="880" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-22">
+<rect x="113" y="840" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="840" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="818" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="832" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-22">
+<rect x="141" y="810" width="6" height="10" fill="#5a6680"/><rect x="134" y="818" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="790" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="793" width="36" height="20" rx="2.5" fill="#1cb0f6"/>
+<g fill="#ffffff" opacity=".85"><rect x="130" y="797" width="14" height="2.4" rx="1.2"/><rect x="130" y="801.5" width="22" height="2.4" rx="1.2"/><rect x="134" y="806" width="12" height="2.4" rx="1.2"/></g>
+<rect x="130" y="823" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="826" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-22">
+<rect x="142" y="868" width="4" height="7" fill="#5a6680"/><rect x="132" y="873" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="848" width="28" height="22" rx="8" fill="#1cb0f6" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="852" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-22">
+<rect x="125" y="882" width="38" height="21" rx="10.5" fill="#1cb0f6" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="897" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">22</text>
+</g>
+</g><g id="seat-23">
+<rect x="275" y="786" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="880" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-23">
+<rect x="283" y="840" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="840" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="818" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="832" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-23">
+<rect x="311" y="810" width="6" height="10" fill="#5a6680"/><rect x="304" y="818" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="790" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="793" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="314" cy="803" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="300" y="823" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="826" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-23">
+<rect x="312" y="868" width="4" height="7" fill="#5a6680"/><rect x="302" y="873" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="848" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="852" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-23">
+<rect x="295" y="882" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="897" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">23</text>
+</g>
+</g><g id="seat-24">
+<rect x="359" y="786" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="880" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-24">
+<rect x="367" y="840" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="840" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="818" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="832" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-24">
+<rect x="395" y="810" width="6" height="10" fill="#5a6680"/><rect x="388" y="818" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="790" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="793" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="398" cy="803" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="384" y="823" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="826" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-24">
+<rect x="396" y="868" width="4" height="7" fill="#5a6680"/><rect x="386" y="873" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="848" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="852" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-24">
+<rect x="379" y="882" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="897" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">24</text>
+</g>
+</g><g id="seat-25">
+<rect x="21" y="910" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="1004" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-25">
+<rect x="29" y="964" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="964" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="942" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="956" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-25">
+<rect x="57" y="934" width="6" height="10" fill="#5a6680"/><rect x="50" y="942" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="914" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="917" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="927" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="947" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="950" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-25">
+<rect x="58" y="992" width="4" height="7" fill="#5a6680"/><rect x="48" y="997" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="972" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="976" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-25">
+<rect x="41" y="1006" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="1021" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">25</text>
+</g>
+</g><g id="seat-26">
+<rect x="105" y="910" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="144" cy="1004" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-26">
+<rect x="113" y="964" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="964" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="942" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="956" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-26">
+<rect x="141" y="934" width="6" height="10" fill="#5a6680"/><rect x="134" y="942" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="914" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="917" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="144" cy="927" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="130" y="947" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="950" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-26">
+<rect x="142" y="992" width="4" height="7" fill="#5a6680"/><rect x="132" y="997" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="972" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="976" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-26">
+<rect x="125" y="1006" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="1021" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">26</text>
+</g>
+</g><g id="seat-27">
+<rect x="275" y="910" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="1004" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-27">
+<rect x="283" y="964" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="964" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="942" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="956" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-27">
+<rect x="311" y="934" width="6" height="10" fill="#5a6680"/><rect x="304" y="942" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="914" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="917" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="314" cy="927" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="300" y="947" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="950" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-27">
+<rect x="312" y="992" width="4" height="7" fill="#5a6680"/><rect x="302" y="997" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="972" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="976" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-27">
+<rect x="295" y="1006" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="1021" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">27</text>
+</g>
+</g><g id="seat-28">
+<rect x="359" y="910" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="1004" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-28">
+<rect x="367" y="964" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="964" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="942" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="956" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-28">
+<rect x="395" y="934" width="6" height="10" fill="#5a6680"/><rect x="388" y="942" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="914" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="917" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="398" cy="927" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="384" y="947" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="950" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-28">
+<rect x="396" y="992" width="4" height="7" fill="#5a6680"/><rect x="386" y="997" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="972" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="976" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-28">
+<rect x="379" y="1006" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="1021" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">28</text>
+</g>
+</g><g id="seat-29">
+<rect x="21" y="1034" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="1128" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-29">
+<rect x="29" y="1088" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="1088" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="1066" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="1080" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-29">
+<rect x="57" y="1058" width="6" height="10" fill="#5a6680"/><rect x="50" y="1066" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="1038" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="1041" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="1051" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="1071" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="1074" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-29">
+<rect x="58" y="1116" width="4" height="7" fill="#5a6680"/><rect x="48" y="1121" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="1096" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="1100" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-29">
+<rect x="41" y="1130" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="1145" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">29</text>
+</g>
+</g><g id="seat-30">
+<rect x="105" y="1034" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="144" cy="1128" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-30">
+<rect x="113" y="1088" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="1088" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="1066" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="1080" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-30">
+<rect x="141" y="1058" width="6" height="10" fill="#5a6680"/><rect x="134" y="1066" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="1038" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="1041" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="144" cy="1051" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="130" y="1071" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="1074" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-30">
+<rect x="142" y="1116" width="4" height="7" fill="#5a6680"/><rect x="132" y="1121" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="1096" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="1100" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-30">
+<rect x="125" y="1130" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="1145" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">30</text>
+</g>
+</g><g id="seat-31">
+<rect x="275" y="1034" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="1128" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-31">
+<rect x="283" y="1088" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="1088" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="1066" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="1080" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-31">
+<rect x="311" y="1058" width="6" height="10" fill="#5a6680"/><rect x="304" y="1066" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="1038" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="1041" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="314" cy="1051" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="300" y="1071" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="1074" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-31">
+<rect x="312" y="1116" width="4" height="7" fill="#5a6680"/><rect x="302" y="1121" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="1096" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="1100" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-31">
+<rect x="295" y="1130" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="1145" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">31</text>
+</g>
+</g><g id="seat-32">
+<rect x="359" y="1034" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="1128" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-32">
+<rect x="367" y="1088" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="1088" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="1066" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="1080" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-32">
+<rect x="395" y="1058" width="6" height="10" fill="#5a6680"/><rect x="388" y="1066" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="1038" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="1041" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="398" cy="1051" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="384" y="1071" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="1074" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-32">
+<rect x="396" y="1116" width="4" height="7" fill="#5a6680"/><rect x="386" y="1121" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="1096" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="1100" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-32">
+<rect x="379" y="1130" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="1145" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">32</text>
+</g>
+</g><g id="seat-33">
+<rect x="21" y="1158" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="1252" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-33">
+<rect x="29" y="1212" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="1212" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="1190" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="1204" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-33">
+<rect x="57" y="1182" width="6" height="10" fill="#5a6680"/><rect x="50" y="1190" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="1162" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="1165" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="1175" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="1195" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="1198" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-33">
+<rect x="58" y="1240" width="4" height="7" fill="#5a6680"/><rect x="48" y="1245" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="1220" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="1224" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-33">
+<rect x="41" y="1254" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="1269" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">33</text>
+</g>
+</g><g id="seat-34">
+<rect x="105" y="1158" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="144" cy="1252" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-34">
+<rect x="113" y="1212" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="1212" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="1190" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="1204" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-34">
+<rect x="141" y="1182" width="6" height="10" fill="#5a6680"/><rect x="134" y="1190" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="1162" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="1165" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="144" cy="1175" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="130" y="1195" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="1198" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-34">
+<rect x="142" y="1240" width="4" height="7" fill="#5a6680"/><rect x="132" y="1245" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="1220" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="1224" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-34">
+<rect x="125" y="1254" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="1269" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">34</text>
+</g>
+</g><g id="seat-35">
+<rect x="275" y="1158" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="1252" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-35">
+<rect x="283" y="1212" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="1212" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="1190" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="1204" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-35">
+<rect x="311" y="1182" width="6" height="10" fill="#5a6680"/><rect x="304" y="1190" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="1162" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="1165" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="314" cy="1175" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="300" y="1195" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="1198" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-35">
+<rect x="312" y="1240" width="4" height="7" fill="#5a6680"/><rect x="302" y="1245" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="1220" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="1224" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-35">
+<rect x="295" y="1254" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="1269" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">35</text>
+</g>
+</g><g id="seat-36">
+<rect x="359" y="1158" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="1252" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-36">
+<rect x="367" y="1212" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="1212" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="1190" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="1204" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-36">
+<rect x="395" y="1182" width="6" height="10" fill="#5a6680"/><rect x="388" y="1190" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="1162" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="1165" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="398" cy="1175" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="384" y="1195" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="1198" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-36">
+<rect x="396" y="1240" width="4" height="7" fill="#5a6680"/><rect x="386" y="1245" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="1220" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="1224" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-36">
+<rect x="379" y="1254" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="1269" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">36</text>
+</g>
+</g><g id="seat-37">
+<rect x="21" y="1282" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="60" cy="1376" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-37">
+<rect x="29" y="1336" width="4" height="14" rx="2" fill="#563f2a"/><rect x="87" y="1336" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="25" y="1314" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="25" y="1328" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-37">
+<rect x="57" y="1306" width="6" height="10" fill="#5a6680"/><rect x="50" y="1314" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="39" y="1286" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="42" y="1289" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="60" cy="1299" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="46" y="1319" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="82" cy="1322" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-37">
+<rect x="58" y="1364" width="4" height="7" fill="#5a6680"/><rect x="48" y="1369" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="46" y="1344" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="51" y="1348" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-37">
+<rect x="41" y="1378" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="60" y="1393" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">37</text>
+</g>
+</g><g id="seat-38">
+<rect x="105" y="1282" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="144" cy="1376" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-38">
+<rect x="113" y="1336" width="4" height="14" rx="2" fill="#563f2a"/><rect x="171" y="1336" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="109" y="1314" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="109" y="1328" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-38">
+<rect x="141" y="1306" width="6" height="10" fill="#5a6680"/><rect x="134" y="1314" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="123" y="1286" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="126" y="1289" width="36" height="20" rx="2.5" fill="#26304a"/>
+<circle cx="144" cy="1299" r="3.4" fill="none" stroke="#22b98b" stroke-width="2"/>
+<rect x="130" y="1319" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="166" cy="1322" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-38">
+<rect x="142" y="1364" width="4" height="7" fill="#5a6680"/><rect x="132" y="1369" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="130" y="1344" width="28" height="22" rx="8" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="135" y="1348" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-38">
+<rect x="125" y="1378" width="38" height="21" rx="10.5" fill="#22b98b" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="144" y="1393" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#ffffff">38</text>
+</g>
+</g><g id="seat-39">
+<rect x="275" y="1282" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="314" cy="1376" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-39">
+<rect x="283" y="1336" width="4" height="14" rx="2" fill="#563f2a"/><rect x="341" y="1336" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="279" y="1314" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="279" y="1328" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-39">
+<rect x="311" y="1306" width="6" height="10" fill="#5a6680"/><rect x="304" y="1314" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="293" y="1286" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="296" y="1289" width="36" height="20" rx="2.5" fill="#26304a"/>
+<path d="M308 1295 l12 8 M320 1295 l-12 8" stroke="#a0abc1" stroke-width="2.4" stroke-linecap="round"/>
+<rect x="300" y="1319" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="336" cy="1322" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-39">
+<rect x="312" y="1364" width="4" height="7" fill="#5a6680"/><rect x="302" y="1369" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="300" y="1344" width="28" height="22" rx="8" fill="#4f5d72" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="305" y="1348" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-39">
+<rect x="295" y="1378" width="38" height="21" rx="10.5" fill="#4f5d72" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="314" y="1393" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#0b1020">39</text>
+</g>
+</g><g id="seat-40">
+<rect x="359" y="1282" width="78" height="118" rx="16" fill="transparent" stroke="none" stroke-width="3"/>
+<ellipse cx="398" cy="1376" rx="26" ry="6" fill="#00000040"/>
+<g id="desk-40">
+<rect x="367" y="1336" width="4" height="14" rx="2" fill="#563f2a"/><rect x="425" y="1336" width="4" height="14" rx="2" fill="#563f2a"/>
+<rect x="363" y="1314" width="70" height="18" rx="6" fill="#a07c58" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="363" y="1328" width="70" height="11" rx="4" fill="#8a6a4a" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g id="computer-40">
+<rect x="395" y="1306" width="6" height="10" fill="#5a6680"/><rect x="388" y="1314" width="20" height="4" rx="2" fill="#5a6680" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="377" y="1286" width="42" height="27" rx="5" fill="#0d1222" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="380" y="1289" width="36" height="20" rx="2.5" fill="#26304a"/>
+<path d="M392 1295 l12 8 M404 1295 l-12 8" stroke="#a0abc1" stroke-width="2.4" stroke-linecap="round"/>
+<rect x="384" y="1319" width="28" height="6" rx="2" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<ellipse cx="420" cy="1322" rx="3.4" ry="4" fill="#3a4560" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+<g></g>
+<g id="chair-40">
+<rect x="396" y="1364" width="4" height="7" fill="#5a6680"/><rect x="386" y="1369" width="24" height="4" rx="2" fill="#5a6680"/>
+<rect x="384" y="1344" width="28" height="22" rx="8" fill="#4f5d72" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="389" y="1348" width="18" height="4" rx="2" fill="#ffffff" opacity=".35"/>
+</g>
+<g id="seat-number-40">
+<rect x="379" y="1378" width="38" height="21" rx="10.5" fill="#4f5d72" stroke="#0b1020" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="398" y="1393" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="900" fill="#0b1020">40</text>
+</g>
+</g></g>
+<g id="walker"><g id="student" transform="translate(186.5 666) scale(0.8)"><g transform="scale(-1 1)">
+<g><g id="rig-front">
+<ellipse id="shadow" cx="0" cy="0" rx="16" ry="4.2" fill="#1c2c5926"/>
+<g id="bob" transform="translate(0 -0.16976928400248698)">
+<g id="legs"><g id="upper-leg-l" transform="rotate(17.95 -6 -34)">
+<rect x="-10.5" y="-35" width="9" height="15" rx="4.5" fill="#34406b" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="lower-leg-l" transform="rotate(-9.97 -6 -21)">
+<rect x="-10" y="-23" width="8" height="15" rx="4" fill="#2a3458" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="foot-l" transform="rotate(-7.98 -6 -9)">
+<path d="M-14 -2 q0 -8 8 -8 q5 0 5 8 z" fill="#ffffff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-14" y="-2.4" width="13" height="3.2" rx="1.6" fill="#ff9600" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+</g></g></g><g id="upper-leg-r" transform="rotate(17.95 6 -34)">
+<rect x="1.5" y="-35" width="9" height="15" rx="4.5" fill="#34406b" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="lower-leg-r">
+<rect x="2" y="-23" width="8" height="15" rx="4" fill="#2a3458" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="foot-r" transform="rotate(-7.98 6 -9)">
+<path d="M1 -2 q0 -8 5 -8 q8 0 8 8 z" fill="#ffffff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="1" y="-2.4" width="13" height="3.2" rx="1.6" fill="#ff9600" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+</g></g></g></g>
+<g id="body" transform="rotate(1.99 0 -34)">
+<g id="torso"><rect x="-14" y="-63" width="28" height="33" rx="11" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M-6 -63 l6 6 l6 -6" fill="none" stroke="#ffc800" stroke-width="2" stroke-linecap="round"/>
+<path d="M0 -57 v6" stroke="#ffc800" stroke-width="2"/><rect x="-4" y="-52" width="8" height="10" rx="2" fill="#fff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><rect x="-2.4" y="-50" width="4.8" height="2.4" rx="1" fill="#0e9f9a"/>
+<path d="M-9 -38 h18 v4 q-9 3 -18 0 z" fill="#0b827e" opacity=".55"/></g><g id="upper-arm-l" transform="rotate(-3.96 -14 -57)">
+<rect x="-18.5" y="-60" width="9" height="16" rx="4.5" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="forearm-l" transform="rotate(-14 -14 -46)">
+<rect x="-18" y="-48" width="8" height="13" rx="4" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="hand-l">
+<circle cx="-14" cy="-33" r="4.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g></g>
+</g></g></g><g id="upper-arm-r" transform="rotate(-27.96 14 -57)">
+<rect x="9.5" y="-60" width="9" height="16" rx="4.5" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="forearm-r" transform="rotate(14 14 -46)">
+<rect x="10" y="-48" width="8" height="13" rx="4" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="hand-r">
+<circle cx="14" cy="-33" r="4.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g></g>
+</g></g></g>
+<g id="head" transform="rotate(2.99 0 -62)">
+<rect x="-4" y="-66" width="8" height="7" rx="3" fill="#e9a982" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="-15.5" cy="-77" r="3.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><circle cx="15.5" cy="-77" r="3.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="0" cy="-78" r="16" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M-16 -79 q-1 -16 14 -16 q17 -1 18 15 q-6 -8 -15 -7 q-5 5 -17 8 z" fill="#3a2a35" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><g id="face">
+<g><ellipse cx="-6" cy="-79" rx="2.3" ry="2.9" fill="#213049"/><ellipse cx="6" cy="-79" rx="2.3" ry="2.9" fill="#213049"/>
+<circle cx="-5.2" cy="-80" r=".8" fill="#fff"/><circle cx="6.8" cy="-80" r=".8" fill="#fff"/></g>
+<path d="M-9 -84.5 q3 -2 6 -.6 M3 -85.1 q3 -1.4 6 .6" fill="none" stroke="#3a2a35" stroke-width="1.6" stroke-linecap="round"/>
+<ellipse cx="-10.5" cy="-73.5" rx="3" ry="1.8" fill="#ff9eaa" opacity=".7"/><ellipse cx="10.5" cy="-73.5" rx="3" ry="1.8" fill="#ff9eaa" opacity=".7"/>
+<g><path d="M-5 -71.2 q5 5.5 10 0" fill="none" stroke="#213049" stroke-width="1.8" stroke-linecap="round"/></g></g>
+</g>
+</g></g></g></g>
+<g visibility="hidden"><g id="rig-back">
+<ellipse id="shadow" cx="0" cy="0" rx="16" ry="4.2" fill="#1c2c5926"/>
+<g id="bob">
+<g id="legs"><g id="upper-leg-l">
+<rect x="-10.5" y="-35" width="9" height="15" rx="4.5" fill="#34406b" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="lower-leg-l">
+<rect x="-10" y="-23" width="8" height="15" rx="4" fill="#2a3458" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="foot-l">
+<path d="M-14 -2 q0 -8 8 -8 q5 0 5 8 z" fill="#ffffff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="-14" y="-2.4" width="13" height="3.2" rx="1.6" fill="#ff9600" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+</g></g></g><g id="upper-leg-r">
+<rect x="1.5" y="-35" width="9" height="15" rx="4.5" fill="#34406b" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="lower-leg-r">
+<rect x="2" y="-23" width="8" height="15" rx="4" fill="#2a3458" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="foot-r">
+<path d="M1 -2 q0 -8 5 -8 q8 0 8 8 z" fill="#ffffff" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="1" y="-2.4" width="13" height="3.2" rx="1.6" fill="#ff9600" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+</g></g></g></g>
+<g id="body">
+<g id="upper-arm-l">
+<rect x="-18.5" y="-60" width="9" height="16" rx="4.5" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="forearm-l">
+<rect x="-18" y="-48" width="8" height="13" rx="4" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="hand-l">
+<circle cx="-14" cy="-33" r="4.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g></g>
+</g></g></g><g id="upper-arm-r">
+<rect x="9.5" y="-60" width="9" height="16" rx="4.5" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="forearm-r">
+<rect x="10" y="-48" width="8" height="13" rx="4" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g id="hand-r">
+<circle cx="14" cy="-33" r="4.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<g></g>
+</g></g></g><g id="torso"><rect x="-14" y="-63" width="28" height="33" rx="11" fill="#0e9f9a" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M-9 -63 q9 9 18 0" fill="#0b827e" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><path d="M-11 -40 h22" stroke="#0b827e" stroke-width="2" stroke-linecap="round"/></g>
+<g id="head">
+<rect x="-4" y="-66" width="8" height="7" rx="3" fill="#e9a982" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="-15.5" cy="-77" r="3.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/><circle cx="15.5" cy="-77" r="3.6" fill="#f6c7a1" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<circle cx="0" cy="-78" r="16" fill="#3a2a35" stroke="#213049" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M-13 -70 q13 7 26 0" fill="none" stroke="#213049" stroke-width="1.2" opacity=".35"/><path d="M-6 -92 q6 -5 12 0" fill="none" stroke="#ffffff" stroke-width="1.6" opacity=".25" stroke-linecap="round"/>
+</g>
+</g></g></g></g>
+</g></g></g>
+<g id="fx"></g>
+</svg>

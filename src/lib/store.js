@@ -4,6 +4,7 @@ import { viewerId } from './permissions.js';
 import { $, today } from './utils.js';
 import { S } from '../state.js';
 import { toast } from '../ui/feedback.js';
+import { sceneBusy } from '../scene/fx.js';
 export let synced = new Map(),
   syncedN = new Map(),
   syncQ = Promise.resolve(),
@@ -238,7 +239,7 @@ export function setSyncState(on) {
 }
 export async function refresh(force = false) {
   if (!S.sb || !S.profile) return;
-  if (!force && (syncing || $('overlay').innerHTML || document.hidden)) return;
+  if (!force && (syncing || $('overlay').innerHTML || document.hidden || sceneBusy())) return;
   try {
     await syncQ;
     await loadAll();

@@ -22,6 +22,7 @@ export function navFor(r, p) {
       N('Official Requests', ['New Request', 'Tracking']),
       N('Fees', ['Status', 'Receipts']),
       N('Lab Pass', ['Seat Map', 'My Pass']),
+      N('Library', ['Bookshelf', 'My Books']),
       N('Notifications', ['All', 'Unread']),
       N('Profile'),
     ];
