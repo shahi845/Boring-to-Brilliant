@@ -24,8 +24,16 @@ export function librarySceneMarkup(c) {
   return `<div class="scene-wrap lib-wrap"><div class="scene-chips" id="libChips"></div><div class="scene-stage"><div class="scene" id="libScene"></div></div><div class="scene-panel" id="libPanel" aria-live="polite"></div></div>`;
 }
 
-const visible = () => (key === 'mobile' ? [ui.shelf] : BOOK_SHELVES.map((_, i) => i));
-const caseIndexOf = book => (key === 'mobile' ? 0 : BOOK_SHELVES.findIndex(s => s.id === book.shelfId));
+/* Desktop shows the shelves three at a time (one aisle), phones one shelf at a time. */
+const PER_AISLE = 3;
+const aisleOf = i => Math.floor(i / PER_AISLE);
+const visible = () => {
+  if (key === 'mobile') return [ui.shelf];
+  const a = aisleOf(ui.shelf) * PER_AISLE;
+  return BOOK_SHELVES.map((_, i) => i).slice(a, a + PER_AISLE);
+};
+const shelfIndexOf = book => BOOK_SHELVES.findIndex(s => s.id === book.shelfId);
+const caseIndexOf = book => visible().indexOf(shelfIndexOf(book));
 
 export function mountLibrary() {
   host = document.getElementById('libScene');
@@ -56,6 +64,7 @@ function paint() {
     visible: visible(),
     states: ctx.states(),
     selected: ui.phase === 'selected' ? ui.book : '',
+    located: ui.phase === 'selected' ? ui.located : '',
     taken: ui.taken,
     kid: { x: kid.x, y: kid.y, pose: kid.poseName, flip: kid.flip },
     C,
@@ -69,13 +78,22 @@ function paint() {
 function chips() {
   const el = document.getElementById('libChips');
   if (!el) return;
-  el.innerHTML =
-    key === 'mobile'
-      ? BOOK_SHELVES.map(
-          (s, i) =>
-            `<button type="button" class="chip ${i === ui.shelf ? 'on' : ''}" aria-pressed="${i === ui.shelf}" onclick="libSceneShelf(${i})">${s.name}</button>`,
-        ).join('')
-      : '';
+  if (key === 'mobile')
+    el.innerHTML = BOOK_SHELVES.map(
+      (s, i) =>
+        `<button type="button" class="chip ${i === ui.shelf ? 'on' : ''}" aria-pressed="${i === ui.shelf}" onclick="libSceneShelf(${i})">${s.id} · ${s.name}</button>`,
+    ).join('');
+  else {
+    const aisles = Math.ceil(BOOK_SHELVES.length / PER_AISLE);
+    el.innerHTML =
+      aisles > 1
+        ? Array.from({ length: aisles }, (_, a) => {
+            const sh = BOOK_SHELVES.slice(a * PER_AISLE, a * PER_AISLE + PER_AISLE),
+              on = aisleOf(ui.shelf) === a;
+            return `<button type="button" class="chip ${on ? 'on' : ''}" aria-pressed="${on}" onclick="libSceneShelf(${a * PER_AISLE})">Aisle ${a + 1} · ${sh.map(x => x.id).join(', ')} — ${sh.map(x => x.name).join(', ')}</button>`;
+          }).join('')
+        : '';
+  }
 }
 
 const STEPS = [
@@ -126,17 +144,35 @@ function setStep(phase, text) {
 export function libSceneShelf(i) {
   if (ui.busy || ui.taken) return;
   ui.shelf = i;
-  if (ui.phase === 'selected' && bookById(ui.book)?.shelfId !== BOOK_SHELVES[i].id) {
+  if (ui.phase === 'selected' && !visible().includes(shelfIndexOf(bookById(ui.book)))) {
     ui.phase = 'idle';
     ui.book = '';
   }
   paint();
 }
 
+/**
+ * OPAC: show where a book is. Switches to its shelf, highlights it with a
+ * location pin, scrolls the room into view and opens its details card.
+ */
+export function libSceneLocate(id) {
+  const b = bookById(id);
+  if (!b || !host) return;
+  if (ui.busy || ui.taken) return 'busy';
+  ui.shelf = shelfIndexOf(b);
+  ui.book = id;
+  ui.phase = 'selected';
+  ui.located = id;
+  if (kid.poseName === 'wave') kid.pose('stand');
+  paint();
+  document.getElementById('libScene')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  setTimeout(() => host?.querySelector('#book-' + id)?.focus({ preventScroll: true }), 400);
+}
 /** A book was tapped on the shelf. */
 export function libSceneBook(id) {
   if (ui.busy || ui.taken) return;
   ui.book = id;
+  ui.located = '';
   ui.phase = 'selected';
   if (kid.poseName === 'wave') kid.pose('stand');
   paint();

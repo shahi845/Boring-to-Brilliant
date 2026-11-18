@@ -50,7 +50,7 @@ export function navFor(r, p) {
       );
     }
     if (pos.includes('Librarian'))
-      L.push(N('Library', ['Clearance Requests', 'Student Status'], 'My positions'));
+      L.push(N('Library', ['Clearance Requests', 'Student Status', 'Catalogue'], 'My positions'));
     if (pos.includes('Lab Charge')) L.push(N('Computer Lab', ['Seat Map', 'Passes'], 'My positions'));
     L.push(N('Notifications', ['All', 'Unread']), N('Profile'));
     return L;

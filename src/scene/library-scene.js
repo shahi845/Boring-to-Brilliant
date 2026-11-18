@@ -66,7 +66,7 @@ export function bookSVG(
   r,
   state,
   C = SCENE_LIGHT,
-  { selected = false, taken = false, interactive = true } = {},
+  { selected = false, taken = false, interactive = true, located = false } = {},
 ) {
   const out = state === 'unavailable',
     fill = out ? C.state.unavailable : book.color;
@@ -83,7 +83,11 @@ ${selected ? `<rect x="${r.x - 4}" y="${r.y - 4}" width="${r.w + 8}" height="${r
 <rect x="${r.x + r.w / 2 - 2.6}" y="${r.y + r.h / 2 - 9}" width="5.2" height="18" rx="2" fill="#ffffff" opacity="${out ? 0.25 : 0.42}"/>
 ${out ? `<path d="M${r.x + r.w / 2 - 4} ${r.y + 14} l8 8 m0 -8 l-8 8" stroke="${C.muted}" stroke-width="2" stroke-linecap="round"/>` : ''}
 ${state === 'mine' ? `<path d="M${r.x + r.w - 7} ${r.y - 1} h5 v13 l-2.5 -3 l-2.5 3 z" fill="${C.state.selected}" stroke="${C.line}" stroke-width="1"/>` : ''}
-</g></g>`;
+</g>${
+    located
+      ? `<g transform="translate(${r.x + r.w / 2} ${r.y - 12})" aria-hidden="true"><g class="locate-pin"><path d="M0 0 C-4 -6 -12 -10 -12 -19 A12 12 0 1 1 12 -19 C12 -10 4 -6 0 0 Z" fill="#ff4b4b" stroke="${C.line}" stroke-width="1.5"/><circle cy="-19" r="4.5" fill="#fff"/></g></g>`
+      : ''
+  }</g>`;
 }
 
 /** Bookcase frame with three shelf boards and a name sign. */
@@ -167,6 +171,7 @@ export function librarySVG({
   visible,
   states,
   selected = '',
+  located = '',
   taken = '',
   kid,
   C = SCENE_LIGHT,
@@ -175,7 +180,7 @@ export function librarySVG({
 }) {
   if (kid && kid.holdingBook) kid = { ...kid, holding: heldBookSVG(kid.holdingBook, C) };
   const L = layout;
-  const vis = visible || shelves.map((_, i) => i);
+  const vis = visible || shelves.map((_, i) => i).slice(0, L.cases.length);
   const cases = vis
     .map((si, ci) => {
       const sh = shelves[si];
@@ -187,6 +192,7 @@ export function librarySVG({
               selected: b.id === selected,
               taken: b.id === taken,
               interactive,
+              located: b.id === located,
             }),
           )
           .join('')}</g>`
