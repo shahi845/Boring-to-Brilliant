@@ -2,7 +2,7 @@ import { FORMS, PAGES } from '../app/registry.js';
 import { go, render } from '../app/router.js';
 import { SHORT, STATUSES } from '../lib/constants.js';
 import { notify, resolveRef } from '../lib/notifications.js';
-import { actorName, canEditAttendance, isAA, me, myClasses } from '../lib/permissions.js';
+import { actorName, canEditAttendance, isAA, markableClasses, me, myClasses } from '../lib/permissions.js';
 import { save } from '../lib/store.js';
 import {
   addDays,
@@ -154,9 +154,8 @@ export function rosterModal(cl, d) {
   );
 }
 export function markAttendancePage() {
-  const cls = myClasses();
-  if (!cls.length)
-    return calm('📅', 'No classes assigned to you', 'Admin assigns classes in Staff Management.');
+  const cls = markableClasses();
+  if (!cls.length) return calm('📅', 'No classes yet', 'The Admin adds classes in Settings → Institution.');
   if (!cls.includes(markClass)) markClass = cls[0];
   const t = today();
   if (!markDate || markDate > t || markDate < addDays(t, -7)) markDate = t;
@@ -327,7 +326,7 @@ export function historyPage() {
         `<b>${c('Present')}</b> / ${c('Late')} / ${c('Absent')} / ${c('On Leave')} / ${c('Outside Campus')}`,
         sb ? tag(sb.verified ? 'Verified' : 'Submitted') : tag('Not submitted'),
         btn('View', call('rosterModal', cl, d), 'sm') +
-          (myClasses().includes(cl) && d >= addDays(today(), -7)
+          (markableClasses().includes(cl) && d >= addDays(today(), -7)
             ? ' ' + btn('Edit', call('markOpen', cl, d), 'sm')
             : ''),
       ]);

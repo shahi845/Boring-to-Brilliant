@@ -81,6 +81,12 @@ export function myClasses() {
   if (S.role !== 'Staff' || !me()) return [];
   return [...new Set([...(isTeacher() ? me().classes : []), ...classTeacherOf()])];
 }
+/** Any teacher can take attendance for any class; their own classes are listed first. */
+export function markableClasses() {
+  if (!isTeacher()) return [];
+  const mine = myClasses();
+  return [...mine, ...S.db.classes.filter(c => !mine.includes(c))];
+}
 /** Only the Admin and the class teacher may rearrange a class's seats. */
 export function canArrange(cls) {
   return S.role === 'Admin' || classTeacherOf().includes(cls);
