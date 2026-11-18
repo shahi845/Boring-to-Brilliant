@@ -21,12 +21,13 @@ import { legend } from './attendance.js';
 import { att, attPct, classStudents } from './shared.js';
 import { S } from '../state.js';
 import { btn, call, calm, card, heading, itemRow, tabs, tag } from '../ui/components.js';
-import { confirmBox, mhead, modal, toast } from '../ui/feedback.js';
+import { closeModal, confirmBox, mhead, modal, toast } from '../ui/feedback.js';
 import { F, commit, formHTML } from '../ui/forms.js';
 /* ==========================================================================
    ADMIN — students, staff & positions, admissions
    ========================================================================== */
 PAGES.Students = () => {
+  if (S.section === 'Classes') return classesPage();
   if (S.section === 'Add Student')
     return (
       heading('Students', 'Add a student. Roll numbers are generated automatically.') +
@@ -37,7 +38,12 @@ PAGES.Students = () => {
           'student',
           [
             F('name', 'Full name'),
-            F('class', 'Class', 'select', { options: S.db.classes }),
+            `<label>Class<select class="field" name="class" data-req onchange="this.closest('form').querySelector('.newclass').hidden = this.value !== '__new'">${S.db.classes
+              .map(c => `<option value="${esc(c)}">${esc(c)}</option>`)
+              .join(
+                '',
+              )}<option value="__new"${S.db.classes.length ? '' : ' selected'}>+ New class…</option></select><span class="err" data-err="class"></span></label>`,
+            `<label class="newclass"${S.db.classes.length ? ' hidden' : ''}>New class name<input class="field" name="newClass" maxlength="40" placeholder="e.g. Degree III"><span class="hint">Created when you add the student.</span><span class="err" data-err="newClass"></span></label>`,
             F('email', 'Email', 'email'),
             F('guardian', 'Guardian phone', 'text', { ph: '+91 …' }),
             F('pw', 'Sign-in password', 'text', {
@@ -65,16 +71,158 @@ PAGES.Students = () => {
     )
   );
 };
-export function rollFor(cl) {
-  const n = classStudents(cl).length + 1;
+/* ---------- classes ---------- */
+function classesPage() {
+  const ct = S.db.settings.classTeachers || {};
   return (
-    (cl === 'Degree I' ? 'D1-' : cl === 'Degree II' ? 'D2-' : cl.slice(0, 2).toUpperCase() + '-') + pad(n)
+    heading('Students', 'Create and manage classes. Every class gets its own seating plan and attendance.') +
+    tabs() +
+    `<div class="row2">${card(
+      'Classes',
+      S.db.classes.length
+        ? S.db.classes
+            .map(c => {
+              const n = classStudents(c).length,
+                t = S.db.staff.find(x => x.id === +ct[c]);
+              return itemRow({
+                icon: `<span class="avatar" style="background:#0e9f9a" aria-hidden="true">${esc(rollPrefix(c))}</span>`,
+                title: esc(c),
+                meta:
+                  plural(n, 'student') +
+                  ' · ' +
+                  (t ? 'Class teacher: ' + esc(t.name) : 'No class teacher yet'),
+                right:
+                  btn('Add student', call('addStudentTo', c), 'sm') +
+                  btn('Rename', call('renameClassModal', c), 'sm') +
+                  btn('Remove', call('removeClass', c), 'sm danger'),
+              });
+            })
+            .join('')
+        : calm('🏫', 'No classes yet', 'Create your first class.'),
+    )}${card(
+      'New class',
+      formHTML(
+        'newclass',
+        [
+          F('name', 'Class name', 'text', {
+            full: true,
+            ph: 'e.g. Degree III',
+            hint: 'Roll numbers get a short prefix, e.g. Degree III → D3-01.',
+          }),
+        ],
+        'Create class',
+      ),
+    )}</div>`
   );
 }
+FORMS.newclass = v => {
+  const name = v.name.replace(/\s+/g, ' ').trim(),
+    err = classNameError(name);
+  if (err) return { field: 'name', msg: err };
+  S.db.classes.push(name);
+  commit('Class “' + name + '” created — assign a class teacher in Staff Management', false);
+};
+export function addStudentTo(c) {
+  go('Students', 'Add Student');
+  setTimeout(() => {
+    const sel = document.querySelector('#content select[name=class]');
+    if (sel) sel.value = c;
+  }, 60);
+}
+export function renameClassModal(c) {
+  modal(
+    mhead('Rename class', esc(c) + ' · ' + plural(classStudents(c).length, 'student')) +
+      formHTML(
+        'renameclass',
+        [
+          `<input type="hidden" name="old" value="${esc(c)}">`,
+          F('name', 'New name', 'text', {
+            value: c,
+            full: true,
+            hint: 'Students, attendance submissions, seating and the class teacher move to the new name.',
+          }),
+        ],
+        'Rename',
+      ),
+  );
+}
+FORMS.renameclass = v => {
+  const name = v.name.replace(/\s+/g, ' ').trim(),
+    old = v.old;
+  if (name === old) return closeModal();
+  const err = classNameError(name);
+  if (err) return { field: 'name', msg: err };
+  S.db.classes = S.db.classes.map(c => (c === old ? name : c));
+  S.db.students.forEach(st => st.class === old && (st.class = name));
+  S.db.staff.forEach(st => (st.classes = (st.classes || []).map(c => (c === old ? name : c))));
+  S.db.attSubs.forEach(x => x.class === old && (x.class = name));
+  const ct = S.db.settings.classTeachers || {};
+  if (old in ct) {
+    ct[name] = ct[old];
+    delete ct[old];
+  }
+  if (S.db.seating?.[old]) {
+    S.db.seating[name] = S.db.seating[old];
+    delete S.db.seating[old];
+  }
+  commit('Class renamed to “' + name + '”');
+};
+export function removeClass(c) {
+  const n = classStudents(c).length;
+  if (n) return toast('Move or remove the ' + plural(n, 'student') + ' in ' + c + ' first', 'err');
+  confirmBox(
+    'Remove ' + c + '?',
+    'The class has no students. Past attendance records stay in history.',
+    'Remove',
+    () => {
+      S.db.classes = S.db.classes.filter(x => x !== c);
+      const ct = S.db.settings.classTeachers || {};
+      delete ct[c];
+      S.db.staff.forEach(st => (st.classes = (st.classes || []).filter(x => x !== c)));
+      if (S.db.seating?.[c]) delete S.db.seating[c];
+      commit('Class removed');
+    },
+    true,
+  );
+}
+const ROMAN = { I: 1, II: 2, III: 3, IV: 4, V: 5, VI: 6, VII: 7, VIII: 8, IX: 9, X: 10 };
+/** Roll prefix from the class name: "Degree I" → D1, "Degree III" → D3, "BA English" → BE. */
+export function rollPrefix(cl) {
+  const words = String(cl).trim().split(/\s+/).filter(Boolean);
+  return (
+    words
+      .map(w => ROMAN[w.toUpperCase()] || (/^\d+$/.test(w) ? w : w[0].toUpperCase()))
+      .join('')
+      .slice(0, 4) || 'CL'
+  );
+}
+/** Next free roll number in a class. */
+export function rollFor(cl) {
+  const pre = rollPrefix(cl) + '-',
+    used = classStudents(cl).map(st =>
+      String(st.roll).startsWith(pre) ? +String(st.roll).slice(pre.length) || 0 : 0,
+    );
+  return pre + pad(Math.max(classStudents(cl).length, ...used, 0) + 1);
+}
+/** Validate a new class name; returns an error message or ''. */
+export function classNameError(name) {
+  if (!name) return 'Enter a class name';
+  if (name.length > 40) return 'Keep it under 40 characters';
+  if (/[,|]/.test(name)) return 'Commas and | can’t be used in class names';
+  if (S.db.classes.some(c => c.toLowerCase() === name.toLowerCase())) return 'That class already exists';
+  return '';
+}
 FORMS.student = v => {
+  if (v.class === '__new') {
+    v.newClass = (v.newClass || '').replace(/\s+/g, ' ').trim();
+    const err = classNameError(v.newClass);
+    if (err) return { field: 'newClass', msg: err };
+  }
   if (S.db.students.some(s => (s.email || '').toLowerCase() === v.email.toLowerCase()))
     return { field: 'email', msg: 'A student with this email already exists' };
   if (v.pw.length < 8) return { field: 'pw', msg: 'At least 8 characters' };
+  const newClass = v.class === '__new' ? v.newClass : '';
+  if (newClass) v.class = newClass;
   const st = {
     id: nextId(S.db.students),
     login: nextLogin('ST-', 1000),
@@ -90,9 +238,11 @@ FORMS.student = v => {
       if (f) f.disabled = false;
       return;
     }
+    if (newClass && !S.db.classes.includes(newClass)) S.db.classes.push(newClass);
     S.db.students.push(st);
     save();
     go('Students', 'Directory');
+    if (newClass) toast('Class “' + newClass + '” created');
     setTimeout(() => credentialsModal(st.name, st.login, v.pw), 80);
   });
 };

@@ -75,7 +75,7 @@ export function navFor(r, p) {
     ];
   return [
     N('Home'),
-    N('Students', ['Directory', 'Add Student'], 'Manage'),
+    N('Students', ['Directory', 'Add Student', 'Classes'], 'Manage'),
     N('Staff Management', ['Staff & Positions', 'Add Staff'], 'Manage'),
     N('Attendance', ['Monitoring', 'Outside Campus', 'Leave Status', 'Medical', 'Forms'], 'Manage'),
     N('Admissions', ['Pipeline', 'New Application'], 'Manage'),
