@@ -5,6 +5,7 @@
  * Existing Campus IDs are skipped, so the script is safe to run again.
  */
 import { readFileSync } from 'node:fs';
+import { pathToFileURL } from 'node:url';
 import { loadConfig } from '../config.js';
 import { createSupabaseAdmin } from '../lib/supabase.js';
 import { checkPassword, normaliseLogin } from '../lib/validate.js';
@@ -46,7 +47,7 @@ export async function createAccounts(rows, cfg, { fetchImpl = fetch, log = conso
   return result;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const file = process.argv[2];
   const cfg = loadConfig();
   if (!file || !cfg.ready) {
