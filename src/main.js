@@ -37,6 +37,7 @@ import * as m27 from './ui/feedback.js';
 import * as m28 from './ui/forms.js';
 import * as m29 from './ui/search.js';
 import * as m30 from './ui/theme.js';
+import * as m31 from './ui/wizard.js';
 import { bootAuth } from './lib/auth.js';
 import { emptyDB, initBackgroundSync } from './lib/store.js';
 import { initRouter } from './app/router.js';
@@ -76,6 +77,7 @@ Object.assign(
   m28,
   m29,
   m30,
+  m31,
 );
 
 try {

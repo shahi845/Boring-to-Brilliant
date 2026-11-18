@@ -1,4 +1,5 @@
 import { FORMS, PAGES } from '../app/registry.js';
+import { Chips, Choice, wizardHTML } from '../ui/wizard.js';
 import { go } from '../app/router.js';
 import { leaders, notify, resolveRef } from '../lib/notifications.js';
 import { actorName, canDecide, isAA, me } from '../lib/permissions.js';
@@ -22,7 +23,7 @@ import { setAtt } from './shared.js';
 import { S } from '../state.js';
 import { btn, call, calm, card, heading, itemRow, stepper, table, tabs, tag } from '../ui/components.js';
 import { mhead, modal, toast } from '../ui/feedback.js';
-import { F, commit, formHTML } from '../ui/forms.js';
+import { F, commit } from '../ui/forms.js';
 /* ==========================================================================
    LEAVE — apply → decision (Principal/VP) → clearance (Academic Assistant)
    ========================================================================== */
@@ -48,13 +49,60 @@ export function leaveSteps(l) {
   s.push({ label: 'Done', icon: '🏁', state: ['Cleared', 'Approved'].includes(l.status) ? 'done' : '' });
   return s;
 }
+/** Leave application as a short step-by-step form. */
+function leaveWizard(s) {
+  const t = today();
+  return wizardHTML(
+    'leave',
+    [
+      {
+        icon: '📝',
+        title: 'What kind of leave?',
+        hint: 'Tap one to continue.',
+        fields: [
+          Choice('type', 'Leave type', [
+            { value: 'Personal', label: 'Personal', icon: '🙋', hint: 'Family or personal reasons' },
+            { value: 'Medical', label: 'Medical', icon: '🤒', hint: 'You are unwell' },
+            { value: 'Official', label: 'Official', icon: '🏛️', hint: 'College or official work' },
+            { value: 'Other', label: 'Other', icon: '✨', hint: 'Something else' },
+          ]),
+        ],
+      },
+      {
+        icon: '📅',
+        title: 'When will you be away?',
+        hint: 'Pick a quick option or choose the dates.',
+        fields: [
+          Chips([
+            { label: 'Today', set: { from: t, to: t } },
+            { label: 'Tomorrow', set: { from: addDays(t, 1), to: addDays(t, 1) } },
+            { label: '2 days', set: { from: t, to: addDays(t, 1) } },
+            { label: '3 days', set: { from: t, to: addDays(t, 2) } },
+          ]),
+          F('from', 'From', 'date', { value: t }),
+          F('to', 'To', 'date', { value: t, after: 'from' }),
+        ],
+      },
+      {
+        icon: '💬',
+        title: 'Why do you need leave?',
+        hint: 'One or two clear sentences are enough.',
+        fields: [
+          F('n', 'Student', 'readonly', { value: s.name + ' · ' + s.class }),
+          F('reason', 'Reason', 'textarea', { full: true, ph: 'e.g. Attending my sister’s wedding at home' }),
+        ],
+      },
+    ],
+    'Submit application',
+  );
+}
 PAGES['Leave Application'] = () => {
   const s = me();
   if (S.section === 'Apply')
     return (
       heading('Leave application', 'Apply in under a minute and follow every step.') +
       tabs() +
-      `<div class="row2">${card('New application', formHTML('leave', [F('type', 'Leave type', 'select', { options: ['Personal', 'Medical', 'Official', 'Other'] }), F('n', 'Student', 'readonly', { value: s.name + ' · ' + s.class }), F('from', 'From', 'date', { value: today() }), F('to', 'To', 'date', { value: today() }), F('reason', 'Reason', 'textarea', { full: true, ph: 'A short, clear reason' })], 'Submit application'))}${card('How it works', `${stepper([{ label: 'You apply', icon: '📝', state: 'done' }, { label: 'Review', icon: '🖋️', state: '' }, ...(S.db.settings.clearanceRequired ? [{ label: 'Clearance', icon: '🗂️', state: '' }] : []), { label: 'Done', icon: '🏁', state: '' }])}<p class="muted">Your application is reviewed by the ${esc(S.db.settings.leaveAuthority.replace(' only', ''))}${S.db.settings.clearanceRequired ? ', then cleared by the Academic Assistant' : ''}. You’ll get a notification at every step.</p><p class="tinyhint">Applying does not change your attendance record — staff record attendance separately.</p>`)}</div>`
+      `<div class="row2">${card('New application', leaveWizard(s))}${card('How it works', `${stepper([{ label: 'You apply', icon: '📝', state: 'done' }, { label: 'Review', icon: '🖋️', state: '' }, ...(S.db.settings.clearanceRequired ? [{ label: 'Clearance', icon: '🗂️', state: '' }] : []), { label: 'Done', icon: '🏁', state: '' }])}<p class="muted">Your application is reviewed by the ${esc(S.db.settings.leaveAuthority.replace(' only', ''))}${S.db.settings.clearanceRequired ? ', then cleared by the Academic Assistant' : ''}. You’ll get a notification at every step.</p><p class="tinyhint">Applying does not change your attendance record — staff record attendance separately.</p>`)}</div>`
     );
   const mine = S.db.leaves.filter(l => l.studentId === s.id).sort((a, b) => b.id - a.id);
   return (
@@ -80,7 +128,8 @@ FORMS.leave = v => {
   );
   if (clash)
     return (
-      'You already have a ' +
+      'You already have ' +
+      (/^[aeiou]/i.test(clash.status) ? 'an ' : 'a ') +
       clash.status.toLowerCase() +
       ' application for ' +
       fmtRange(clash.from, clash.to)

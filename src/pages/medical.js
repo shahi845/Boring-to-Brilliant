@@ -6,12 +6,52 @@ import { S } from '../state.js';
 import { btn, call, calm, card, itemRow, tag } from '../ui/components.js';
 import { mhead, modal, toast } from '../ui/feedback.js';
 import { F, commit, formHTML } from '../ui/forms.js';
+import { Chips, wizardHTML } from '../ui/wizard.js';
+import { addDays } from '../lib/utils.js';
 /* ---------- medical (inside Attendance) ---------- */
+function medicalWizard() {
+  const t = today();
+  return wizardHTML(
+    'medical',
+    [
+      {
+        icon: '📅',
+        title: 'When were you unwell?',
+        hint: 'Pick a quick option or choose the dates.',
+        fields: [
+          Chips([
+            { label: 'Today', set: { from: t, to: t } },
+            { label: 'Yesterday', set: { from: addDays(t, -1), to: addDays(t, -1) } },
+            { label: 'Last 2 days', set: { from: addDays(t, -1), to: t } },
+            { label: 'Last 3 days', set: { from: addDays(t, -2), to: t } },
+          ]),
+          F('from', 'From', 'date', { value: t }),
+          F('to', 'To', 'date', { value: t, after: 'from' }),
+        ],
+      },
+      {
+        icon: '🩺',
+        title: 'A short, general reason',
+        hint: 'Keep it general — please don’t share detailed health information.',
+        fields: [
+          Chips([
+            { label: 'Fever', set: { note: 'Fever, rested at home' } },
+            { label: 'Cold / cough', set: { note: 'Cold and cough, rested at home' } },
+            { label: 'Doctor visit', set: { note: 'Unwell, visited the doctor' } },
+            { label: 'Stomach upset', set: { note: 'Stomach upset, rested at home' } },
+          ]),
+          F('note', 'Reason', 'text', { full: true, ph: 'e.g. Unwell, rested at home' }),
+        ],
+      },
+    ],
+    'Submit request',
+  );
+}
 export function medicalPage() {
   if (S.role === 'Student') {
     const s = me(),
       mine = S.db.medical.filter(m => m.studentId === s.id).sort((a, b) => b.id - a.id);
-    return `<div class="row2">${card('New medical request', `<p class="muted" style="margin-top:0">For days you were unwell. The Academic Assistant verifies it. Please don’t share detailed health information here.</p>` + formHTML('medical', [F('from', 'From', 'date', { value: today() }), F('to', 'To', 'date', { value: today() }), F('note', 'Short, general reason', 'text', { full: true, ph: 'e.g. Unwell, rested at home' })], 'Submit request'))}${card('My medical requests', mine.length ? mine.map(m => itemRow({ title: fmtRange(m.from, m.to), meta: esc(m.note) + (m.reviewNote ? ' · ' + esc(m.reviewNote) : ''), right: tag(m.status), onclick: call('medicalDetail', m.id) })).join('') : calm('✚', 'No medical requests'))}</div>`;
+    return `<div class="row2">${card('New medical request', `<p class="muted" style="margin-top:0">For days you were unwell. The Academic Assistant verifies it. Please don’t share detailed health information here.</p>` + medicalWizard())}${card('My medical requests', mine.length ? mine.map(m => itemRow({ title: fmtRange(m.from, m.to), meta: esc(m.note) + (m.reviewNote ? ' · ' + esc(m.reviewNote) : ''), right: tag(m.status), onclick: call('medicalDetail', m.id) })).join('') : calm('✚', 'No medical requests'))}</div>`;
   }
   const list = S.db.medical.slice().sort((a, b) => b.id - a.id);
   return card(

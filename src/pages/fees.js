@@ -22,6 +22,7 @@ import { S } from '../state.js';
 import { btn, call, calm, card, heading, itemRow, table, tabs, tag } from '../ui/components.js';
 import { mhead, modal, toast } from '../ui/feedback.js';
 import { F, commit, formHTML } from '../ui/forms.js';
+import { Chips, wizardHTML } from '../ui/wizard.js';
 /* ==========================================================================
    FEES — students see status; Principal/VP authorize adjustments
    ========================================================================== */
@@ -225,14 +226,34 @@ export function extModal(fid) {
   const f = S.db.fees.find(x => x.id === fid);
   modal(
     mhead('Request more time', esc(f.category) + ' · ' + money(f.amount) + ' · due ' + fmtDate(f.due)) +
-      formHTML(
+      wizardHTML(
         'ext',
         [
-          `<input type="hidden" name="fid" value="${fid}">`,
-          F('newDue', 'Pay by', 'date', { value: addDays(f.due > today() ? f.due : today(), 14) }),
-          F('detail', 'Reason', 'text', { full: true, ph: 'e.g. Scholarship expected next month' }),
+          {
+            icon: '🗓️',
+            title: 'When can you pay?',
+            hint: 'Currently due ' + fmtDate(f.due) + '. Pick a new date after that.',
+            fields: [
+              Chips(
+                [7, 14, 30].map(n => ({
+                  label: '+' + n + ' days',
+                  set: { newDue: addDays(f.due > today() ? f.due : today(), n) },
+                })),
+              ),
+              F('newDue', 'Pay by', 'date', { value: addDays(f.due > today() ? f.due : today(), 14) }),
+            ],
+          },
+          {
+            icon: '💬',
+            title: 'Why do you need more time?',
+            hint: 'The Principal sees this with your request.',
+            fields: [
+              F('detail', 'Reason', 'text', { full: true, ph: 'e.g. Scholarship expected next month' }),
+            ],
+          },
         ],
         'Send request',
+        { hidden: `<input type="hidden" name="fid" value="${fid}">` },
       ),
   );
 }

@@ -19,14 +19,14 @@ export function F(name, label, type = 'text', o = {}) {
       })
       .join('')}</select>`;
   else if (type === 'textarea')
-    input = `<textarea class="field" name="${name}" ${req ? 'data-req' : ''} maxlength="${o.max || 500}" placeholder="${esc(o.ph || '')}">${esc(v)}</textarea>`;
+    input = `<textarea class="field" name="${name}" ${req ? 'data-req' : ''} maxlength="${o.max || 500}" placeholder="${esc(o.ph || '')}" ${o.phFrom ? `data-ph-from="${esc(o.phFrom)}"` : ''}>${esc(v)}</textarea>`;
   else if (type === 'readonly') input = `<div class="readonly">${esc(v)}</div>`;
   else if (type === 'checks')
     input = `<div class="checks">${(o.options || []).map(x => `<label><input type="checkbox" name="${name}" value="${esc(x)}" ${(o.value || []).includes(x) ? 'checked' : ''}> ${esc(x)}</label>`).join('')}</div>`;
   else if (type === 'checkbox')
     return `<label${cls} style="flex-direction:row;align-items:center;gap:9px"><input type="checkbox" name="${name}" ${v ? 'checked' : ''}> ${esc(label)}</label>`;
   else
-    input = `<input class="field" type="${type}" name="${name}" value="${esc(v)}" ${req ? 'data-req' : ''} ${o.min != null ? `min="${o.min}"` : ''} ${o.maxv != null ? `max="${o.maxv}"` : ''} placeholder="${esc(o.ph || '')}" ${type === 'text' ? 'maxlength="120"' : ''}>`;
+    input = `<input class="field" type="${type}" name="${name}" value="${esc(v)}" ${req ? 'data-req' : ''} ${o.after ? `data-after="${esc(o.after)}"` : ''} ${o.min != null ? `min="${o.min}"` : ''} ${o.maxv != null ? `max="${o.maxv}"` : ''} placeholder="${esc(o.ph || '')}" ${type === 'text' ? 'maxlength="120"' : ''}>`;
   return `<label${cls}>${esc(label)}${input}${o.hint ? `<span class="hint">${esc(o.hint)}</span>` : ''}<span class="err" data-err="${name}"></span></label>`;
 }
 export function formHTML(id, fields, submit = 'Save', extra = '') {
@@ -42,7 +42,10 @@ export function submitForm(e, id) {
   const v = {};
   [...f.elements].forEach(el => {
     if (!el.name) return;
-    if (el.type === 'checkbox') {
+    if (el.type === 'radio') {
+      if (el.checked) v[el.name] = el.value;
+      else if (!(el.name in v)) v[el.name] = '';
+    } else if (el.type === 'checkbox') {
       if (el.closest('.checks')) {
         v[el.name] ||= [];
         if (el.checked) v[el.name].push(el.value);
@@ -56,6 +59,13 @@ export function submitForm(e, id) {
       el.classList.add('invalid');
       const er = f.querySelector(`[data-err="${el.name}"]`);
       if (er) er.textContent = 'Required';
+    }
+  });
+  f.querySelectorAll('.choice-group').forEach(g => {
+    if (!g.querySelector('input:checked')) {
+      bad = true;
+      const er = f.querySelector(`[data-err="${g.dataset.group}"]`);
+      if (er) er.textContent = 'Choose one';
     }
   });
   if (bad) {

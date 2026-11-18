@@ -6,6 +6,7 @@ import { S } from '../state.js';
 import { btn, call, calm, card, itemRow, table } from '../ui/components.js';
 import { confirmBox, mhead, modal } from '../ui/feedback.js';
 import { F, commit, formHTML } from '../ui/forms.js';
+import { wizardHTML } from '../ui/wizard.js';
 /* ---------- forms (inside Attendance) ---------- */
 export function formsPage() {
   if (S.role === 'Admin') {
@@ -51,15 +52,22 @@ export function openForm(id) {
   if (!f) return;
   modal(
     mhead(f.title, esc(f.description)) +
-      formHTML(
+      wizardHTML(
         'formsub',
         [
-          `<input type="hidden" name="formId" value="${f.id}">`,
-          F('n', 'Name', 'readonly', { value: s.name }),
-          F('c', 'Class', 'readonly', { value: s.class + ' · ' + s.roll }),
-          F('response', f.prompt || 'Your response', 'textarea', { full: true }),
+          {
+            icon: '▤',
+            title: f.prompt || 'Your response',
+            hint: f.description || '',
+            fields: [
+              F('n', 'Name', 'readonly', { value: s.name }),
+              F('c', 'Class', 'readonly', { value: s.class + ' · ' + s.roll }),
+              F('response', 'Your answer', 'textarea', { full: true }),
+            ],
+          },
         ],
         'Submit form',
+        { hidden: `<input type="hidden" name="formId" value="${f.id}">` },
       ),
   );
 }

@@ -305,7 +305,16 @@ export function setSyncState(on) {
 }
 export async function refresh(force = false) {
   if (!S.sb || !S.profile) return;
-  if (!force && (syncing || $('overlay').innerHTML || document.hidden || sceneBusy())) return;
+  // never reload while a scene is animating or the user is part-way through a form
+  if (
+    !force &&
+    (syncing ||
+      $('overlay').innerHTML ||
+      document.hidden ||
+      sceneBusy() ||
+      document.querySelector('#content form[data-dirty]'))
+  )
+    return;
   try {
     await syncQ;
     await loadAll();

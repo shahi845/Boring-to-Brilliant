@@ -9,6 +9,7 @@ import { S } from '../state.js';
 import { btn, call, calm, card, heading, itemRow, stepper, tabs, tag } from '../ui/components.js';
 import { mhead, modal, toast } from '../ui/feedback.js';
 import { F, commit, formHTML } from '../ui/forms.js';
+import { Choice, wizardHTML } from '../ui/wizard.js';
 /* ==========================================================================
    OFFICIAL REQUESTS — routed by type (Admin office / Academic Assistant / Librarian)
    ========================================================================== */
@@ -51,24 +52,49 @@ PAGES['Official Requests'] = () => {
           'Certificates, letters and corrections — tracked from start to finish.',
         ) +
         tabs() +
-        `<h2 class="play-heading" style="margin-top:0">1 · What do you need?</h2><div class="choicegrid">${REQUEST_TYPES.map(t => `<button style="${t === pick ? 'border-color:var(--primary);background:var(--pale)' : ''}" onclick="${call('pickReq', t)}" aria-pressed="${t === pick}"><b>${REQ_ICON[t]}</b>${esc(t)}<div class="tinyhint" style="font-weight:600;margin-top:4px">Handled by ${esc(S.db.settings.routing[t])}</div></button>`).join('')}</div>` +
-        (pick
-          ? `<h2 class="play-heading">2 · A few details</h2>` +
-            card(
-              '',
-              formHTML(
-                'request',
-                [
-                  `<input type="hidden" name="type" value="${esc(pick)}">`,
+        card(
+          '',
+          wizardHTML(
+            'request',
+            [
+              {
+                icon: '📄',
+                title: 'What do you need?',
+                hint: 'Tap one to continue.',
+                fields: [
+                  Choice(
+                    'type',
+                    'Request type',
+                    REQUEST_TYPES.map(t => ({
+                      value: t,
+                      label: t,
+                      icon: REQ_ICON[t],
+                      hint: 'Handled by ' + S.db.settings.routing[t],
+                      ph: REQ_HINT[t],
+                    })),
+                    pick,
+                  ),
+                ],
+              },
+              {
+                icon: '💬',
+                title: 'A few details',
+                hint: 'Tell the office exactly what you need it for.',
+                fields: [
                   F('n', 'Name', 'readonly', { value: s.name }),
                   F('c', 'Class & roll no.', 'readonly', { value: s.class + ' · ' + s.roll }),
-                  F('details', 'Details', 'textarea', { full: true, ph: REQ_HINT[pick] }),
+                  F('details', 'Details', 'textarea', {
+                    full: true,
+                    ph: REQ_HINT[pick] || 'Tell us what you need',
+                    phFrom: 'type',
+                  }),
                 ],
-                'Submit ' + pick.toLowerCase(),
-                btn('Change type', "pickReq('')", ''),
-              ),
-            )
-          : '')
+              },
+            ],
+            'Submit request',
+            { start: pick ? 1 : 0 },
+          ),
+        )
       );
     }
     const mine = S.db.requests.filter(r => r.studentId === s.id).sort((a, b) => b.id - a.id);
