@@ -204,7 +204,11 @@ PAGES['Staff Management'] = () => {
                   (s.positions.length
                     ? s.positions.map(p => `<span class="chip">${esc(p)}</span>`).join('')
                     : '<span class="chip grey">No position</span>') +
-                  (s.classes.length ? `<span class="chip grey">📚 ${esc(s.classes.join(', '))}</span>` : ''),
+                  (s.classes.length ? `<span class="chip grey">📚 ${esc(s.classes.join(', '))}</span>` : '') +
+                  Object.entries(S.db.settings.classTeachers || {})
+                    .filter(([c, id]) => +id === s.id && S.db.classes.includes(c))
+                    .map(([c]) => `<span class="chip">⭐ Class teacher · ${esc(c)}</span>`)
+                    .join(''),
                 onclick: call('editStaff', s.id),
                 right:
                   btn('Edit', call('editStaff', s.id), 'sm') +
@@ -214,8 +218,38 @@ PAGES['Staff Management'] = () => {
             )
             .join('')
         : calm('🧑‍🏫', 'No staff yet'),
-    )
+    ) +
+    classTeacherCard()
   );
+};
+/** Admin assigns one class teacher per class. Class teachers can mark that class and arrange its seats. */
+function classTeacherCard() {
+  const ct = S.db.settings.classTeachers || {};
+  return card(
+    'Class teachers',
+    `<p class="muted" style="margin-top:0">The class teacher marks attendance for the class and can arrange the seating plan on the benches.</p>` +
+      formHTML(
+        'classteachers',
+        S.db.classes.map(c =>
+          F('ct_' + c, c, 'select', {
+            options: S.db.staff.map(x => [x.id, x.name + (x.positions.length ? ' · ' + x.positions[0] : '')]),
+            placeholder: 'No class teacher',
+            value: ct[c] ?? '',
+            required: false,
+          }),
+        ),
+        'Save class teachers',
+      ),
+    'style="margin-top:16px"',
+  );
+}
+FORMS.classteachers = v => {
+  const ct = {};
+  S.db.classes.forEach(c => {
+    if (v['ct_' + c]) ct[c] = +v['ct_' + c];
+  });
+  S.db.settings.classTeachers = ct;
+  commit('Class teachers saved', false);
 };
 export function editStaff(id) {
   const s = S.db.staff.find(x => x.id === id);

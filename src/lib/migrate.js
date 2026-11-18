@@ -8,6 +8,8 @@ export function migrate() {
   s.customPositions ||= [];
   S.db.libStatus ||= {};
   S.db.lab ||= { unavailable: [], bookings: [] };
+  S.db.seating ||= {};
+  s.classTeachers ||= {};
   S.db.staff.forEach(x => {
     x.positions ||= [];
     x.classes ||= [];

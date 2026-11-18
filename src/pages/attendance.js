@@ -22,6 +22,7 @@ import {
   today,
 } from '../lib/utils.js';
 import { formsPage } from './forms.js';
+import { benchViewHTML, isArranging } from './benches.js';
 import { medicalPage } from './medical.js';
 import { att, attPct, classStudents, leaveCovering, outsideNow, setAtt, subOf } from './shared.js';
 import { S } from '../state.js';
@@ -32,7 +33,12 @@ import { F, commit, formHTML } from '../ui/forms.js';
    ATTENDANCE
    ========================================================================== */
 export let markClass = '',
-  markDate = '';
+  markDate = '',
+  markView = 'bench';
+export function setMarkView(v) {
+  markView = v;
+  render();
+}
 export function markOpen(cl, d) {
   markClass = cl;
   markDate = d;
@@ -157,8 +163,9 @@ export function markAttendancePage() {
   const st = classStudents(markClass),
     sb = subOf(markClass, markDate),
     mk = st.filter(s => att(s.id, markDate)).length;
-  const head = `<div class="card" style="margin-bottom:16px"><div class="actions" style="justify-content:space-between"><div class="actions">${cls.map(c => `<button class="btn sm ${c === markClass ? 'primary' : ''}" onclick="${call('setMarkClass', c)}">${esc(c)}</button>`).join('')}</div><label class="actions" style="font-weight:800">Date <input class="field" type="date" value="${markDate}" min="${addDays(t, -7)}" max="${t}" onchange="setMarkDate(this.value)"></label></div></div>`;
+  const head = `<div class="card" style="margin-bottom:16px"><div class="actions" style="justify-content:space-between"><div class="actions">${cls.map(c => `<button class="btn sm ${c === markClass ? 'primary' : ''}" onclick="${call('setMarkClass', c)}">${esc(c)}</button>`).join('')}</div><label class="actions" style="font-weight:800">Date <input class="field" type="date" value="${markDate}" min="${addDays(t, -7)}" max="${t}" onchange="setMarkDate(this.value)"></label></div><div class="seg view-seg" role="group" aria-label="View" style="margin-top:12px"><button class="${markView === 'bench' ? 'on' : ''}" aria-pressed="${markView === 'bench'}" onclick="setMarkView('bench')">🪑 Benches</button><button class="${markView === 'list' ? 'on' : ''}" aria-pressed="${markView === 'list'}" onclick="setMarkView('list')">☰ List</button></div></div>`;
   if (!st.length) return head + calm('🎓', 'No students in ' + markClass);
+  if (markView === 'bench') return head + benchViewHTML();
   return (
     head +
     `<div class="card"><div class="play-panel-head"><h3 class="sectiontitle" style="margin:0">${esc(markClass)} · ${fmtDate(markDate)}</h3>${mk < st.length ? btn('Mark remaining as Present', 'markRemaining()', 'sm') : ''}</div>` +
@@ -174,6 +181,7 @@ export function markAttendancePage() {
   );
 }
 export function setMarkClass(c) {
+  if (isArranging()) return toast('Save or cancel the seating first', 'err');
   markClass = c;
   render();
 }

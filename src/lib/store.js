@@ -50,6 +50,7 @@ export function emptyDB() {
     notifications: [],
     libStatus: {},
     lab: { unavailable: [], bookings: [] },
+    seating: {},
   };
 }
 export function toRows() {
@@ -67,6 +68,7 @@ export function toRows() {
   S.db.attSubs.forEach(s => put('attSubs', s.class + '|' + s.date, null, s));
   S.db.lab.bookings.filter(b => !b._pseudo).forEach(b => put('labBookings', b.id, b.studentId, b));
   Object.entries(S.db.libStatus).forEach(([sid, v]) => put('libStatus', sid, +sid, v));
+  Object.entries(S.db.seating || {}).forEach(([cls, v]) => put('seating', cls, null, v));
   put('meta', 'settings', null, S.db.settings);
   put('meta', 'classes', null, { list: S.db.classes });
   put('meta', 'labUnavailable', null, { list: S.db.lab.unavailable });
@@ -80,6 +82,7 @@ export function fromRows(rows, notes) {
     else if (r.collection === 'attSubs') D.attSubs.push(d);
     else if (r.collection === 'labBookings') D.lab.bookings.push(d);
     else if (r.collection === 'libStatus') D.libStatus[r.key] = d;
+    else if (r.collection === 'seating') D.seating[r.key] = d;
     else if (r.collection === 'meta') {
       if (r.key === 'settings') D.settings = d;
       else if (r.key === 'classes') D.classes = d.list || [];

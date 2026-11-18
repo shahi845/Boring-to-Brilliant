@@ -64,10 +64,26 @@ export const isAA = () => hasPos('Academic Assistant'),
   isLabCharge = () => hasPos('Lab Charge');
 export function isTeacher() {
   const m = me();
-  return S.role === 'Staff' && !!m && (m.positions.includes('Teacher / Usthad') || m.classes.length > 0);
+  return (
+    S.role === 'Staff' &&
+    !!m &&
+    (m.positions.includes('Teacher / Usthad') || m.classes.length > 0 || classTeacherOf().length > 0)
+  );
+}
+/** Classes this staff member is class teacher of (assigned by the Admin). */
+export function classTeacherOf() {
+  const m = me();
+  if (S.role !== 'Staff' || !m) return [];
+  const ct = S.db.settings.classTeachers || {};
+  return Object.keys(ct).filter(c => +ct[c] === m.id && S.db.classes.includes(c));
 }
 export function myClasses() {
-  return isTeacher() ? me().classes : [];
+  if (S.role !== 'Staff' || !me()) return [];
+  return [...new Set([...(isTeacher() ? me().classes : []), ...classTeacherOf()])];
+}
+/** Only the Admin and the class teacher may rearrange a class's seats. */
+export function canArrange(cls) {
+  return S.role === 'Admin' || classTeacherOf().includes(cls);
 }
 export function canDecide(kind) {
   return (S.role === 'Principal' || S.role === 'Vice Principal') && leaders(kind).includes('role:' + S.role);
