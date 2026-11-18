@@ -66,7 +66,8 @@
       <p class="muted">Loading your campus…</p>
     </div>
     <div class="app" hidden>
-      <aside class="sidebar" id="sidebar">
+      <aside class="sidebar" id="sidebar" aria-label="Main menu" aria-hidden="true">
+        <button class="menuclose" type="button" aria-label="Close menu" onclick="toggleMenu(false)">✕</button>
         <div class="logo">
           <div class="mark">◈</div>
           <div>
@@ -83,15 +84,52 @@
         ><button class="navbtn" onclick="toggleTheme()"><span class="ico">◐</span> Light / Dark</button
         ><button class="navbtn" onclick="signOut()"><span class="ico">⎋</span> Sign out</button>
       </aside>
+      <div class="menuback" onclick="toggleMenu(false)" aria-hidden="true"></div>
       <main class="main">
         <header class="top">
           <div style="display: flex; align-items: center; gap: 10px; min-width: 0">
             <button
-              class="iconbtn mobilemenu"
+              class="menubtn"
+              id="menubtn"
+              type="button"
               aria-label="Open menu"
-              onclick="document.getElementById('sidebar').classList.toggle('open')"
+              aria-expanded="false"
+              aria-controls="sidebar"
+              onclick="toggleMenu()"
             >
-              ☰
+              <svg viewBox="0 0 48 48" width="46" height="46" aria-hidden="true">
+                <defs>
+                  <linearGradient id="menugrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#f22bd9" />
+                    <stop offset="1" stop-color="#5b2be8" />
+                  </linearGradient>
+                </defs>
+                <circle cx="24" cy="26" r="20" fill="#213049" />
+                <circle cx="24" cy="23" r="20" fill="url(#menugrad)" stroke="#213049" stroke-width="2.5" />
+                <ellipse
+                  cx="16"
+                  cy="11.5"
+                  rx="7"
+                  ry="3.2"
+                  fill="#fff"
+                  opacity=".3"
+                  transform="rotate(-28 16 11.5)"
+                />
+                <g class="mb-rows" fill="#fff">
+                  <circle cx="15.5" cy="15.5" r="2.8" />
+                  <rect x="20.5" y="13" width="14" height="5" rx="2.5" />
+                  <circle cx="15.5" cy="23" r="2.8" />
+                  <rect x="20.5" y="20.5" width="14" height="5" rx="2.5" />
+                  <circle cx="15.5" cy="30.5" r="2.8" />
+                  <rect x="20.5" y="28" width="14" height="5" rx="2.5" />
+                </g>
+                <g class="mb-x" stroke="#fff" stroke-width="4.5" stroke-linecap="round">
+                  <path d="M17 16 31 30M31 16 17 30" />
+                </g>
+              </svg>
+            </button>
+            <button class="toplogo" type="button" onclick="go('Home')" aria-label="OURCAMPUS home">
+              <span class="mark">◈</span><span class="toplogo-name">OURCAMPUS</span>
             </button>
             <nav class="crumbs" id="breadcrumb" aria-label="Breadcrumb"></nav>
           </div>

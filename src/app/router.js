@@ -14,6 +14,7 @@ import { followupDetail } from '../pages/verification.js';
 import { S } from '../state.js';
 import { calm, heading } from '../ui/components.js';
 import { closeModal, toast } from '../ui/feedback.js';
+import { closeMenu } from '../ui/theme.js';
 /* ---------- router ---------- */
 export function go(p, s = '', open = '') {
   S.pendingOpen = open || '';
@@ -50,7 +51,7 @@ export function route() {
     S.page = p;
     S.section = it.sections.length ? (it.sections.includes(s) ? s : it.sections[0]) : '';
   }
-  $('sidebar').classList.remove('open');
+  closeMenu();
   closeModal();
   const c = $('content');
   c.classList.remove('anim');

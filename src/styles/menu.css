@@ -1,0 +1,356 @@
+/* ===== Cartoon menu: round button + pop-up tile menu (replaces the fixed sidebar) ===== */
+
+/* no visible scroll bars anywhere — pages still scroll with wheel, touch and keys */
+html,
+body,
+* {
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* the page now uses the full width */
+.app {
+  display: block;
+}
+.main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ---- round menu button ---- */
+.mobilemenu {
+  display: none !important;
+}
+.menubtn {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: transform 0.18s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+.menubtn:hover {
+  transform: rotate(-8deg) scale(1.07);
+}
+.menubtn:active {
+  transform: scale(0.9);
+}
+.menubtn svg {
+  display: block;
+  overflow: visible;
+}
+.menubtn .mb-rows,
+.menubtn .mb-x {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform 0.25s cubic-bezier(0.2, 1.4, 0.4, 1),
+    opacity 0.15s;
+}
+.menubtn .mb-x {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.4);
+}
+.menu-open .menubtn .mb-rows {
+  opacity: 0;
+  transform: scale(0.4);
+}
+.menu-open .menubtn .mb-x {
+  opacity: 1;
+  transform: none;
+}
+.menubtn:not(:hover) .mb-rows rect {
+  animation: menu-wiggle 4s ease-in-out infinite;
+}
+.menubtn .mb-rows rect:nth-of-type(2) {
+  animation-delay: 0.15s;
+}
+.menubtn .mb-rows rect:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+@keyframes menu-wiggle {
+  0%,
+  88%,
+  100% {
+    transform: none;
+  }
+  92% {
+    transform: translateX(2px);
+  }
+  96% {
+    transform: translateX(-1px);
+  }
+}
+.toplogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 17px;
+  letter-spacing: -0.6px;
+  padding: 0 4px 0 0;
+}
+.toplogo .mark {
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  border-radius: 11px;
+  box-shadow: 0 3px 0 #0a7a76;
+}
+
+/* ---- pop-up menu (the old sidebar) ---- */
+.sidebar,
+.sidebar.open {
+  position: fixed;
+  z-index: 60;
+  top: 12px;
+  left: 12px;
+  width: min(560px, calc(100vw - 24px));
+  height: auto;
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 18px 18px 20px;
+  background: var(--surface);
+  border: 3px solid #213049;
+  border-bottom-width: 8px;
+  border-radius: 30px;
+  box-shadow: 0 24px 60px #1c2c5940;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  align-content: start;
+  transform-origin: 26px 26px;
+  transform: scale(0.5) rotate(-6deg);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    transform 0.32s cubic-bezier(0.2, 1.35, 0.4, 1),
+    opacity 0.18s,
+    visibility 0s linear 0.32s;
+}
+.menu-open .sidebar {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    transform 0.32s cubic-bezier(0.2, 1.35, 0.4, 1),
+    opacity 0.18s;
+}
+body.dark .sidebar {
+  border-color: #0b1020;
+}
+.menuback {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background: #18233c66;
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s,
+    visibility 0s linear 0.2s;
+}
+.menu-open .menuback {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s;
+}
+.menu-open {
+  overflow: hidden;
+}
+.menuclose {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  border-bottom-width: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 900;
+  font-size: 15px;
+}
+.sidebar .logo {
+  grid-column: 1 / -1;
+  padding: 2px 4px 6px;
+}
+.sidebar .small {
+  grid-column: 1 / -1;
+  margin: 10px 4px 2px;
+}
+#navigation {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+/* ---- menu tiles ---- */
+.sidebar .navbtn,
+.sidebar .navbtn.active {
+  position: relative;
+  margin: 0;
+  width: auto;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  text-align: center;
+  padding: 12px 6px 10px;
+  border: 2px solid var(--line);
+  border-bottom-width: 5px;
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 12.5px;
+  line-height: 1.2;
+  transition:
+    transform 0.15s,
+    border-color 0.15s;
+  animation: tile-in 0.35s cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+.sidebar .navbtn:hover {
+  transform: translateY(-3px);
+  border-color: #84d8c9;
+}
+.sidebar .navbtn:active {
+  transform: translateY(2px);
+  border-bottom-width: 3px;
+}
+.sidebar .navbtn.active {
+  border-color: #0e9f9a;
+  background: #e3f6f3;
+  color: #0b6f6b;
+}
+body.dark .sidebar .navbtn.active {
+  background: #173f3d;
+  color: #8fe8d8;
+}
+.sidebar .navbtn .ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  background: #efedff;
+  box-shadow: inset 0 -4px 0 #0000000f;
+}
+.sidebar .navbtn:nth-of-type(6n + 1) .ico {
+  background: #d7f3ee;
+}
+.sidebar .navbtn:nth-of-type(6n + 2) .ico {
+  background: #e1ecff;
+}
+.sidebar .navbtn:nth-of-type(6n + 3) .ico {
+  background: #ffe9d6;
+}
+.sidebar .navbtn:nth-of-type(6n + 4) .ico {
+  background: #f0e4ff;
+}
+.sidebar .navbtn:nth-of-type(6n + 5) .ico {
+  background: #fff3c4;
+}
+.sidebar .navbtn:nth-of-type(6n + 6) .ico {
+  background: #ffe1e6;
+}
+body.dark .sidebar .navbtn .ico {
+  background: #2a3550 !important;
+}
+.sidebar .navbtn .navcount {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  margin: 0;
+}
+.sidebar > .navbtn {
+  min-height: 74px;
+  font-size: 12px;
+}
+.sidebar > .navbtn .ico {
+  width: 34px;
+  height: 34px;
+  font-size: 17px;
+}
+#navigation .navbtn:nth-child(2) {
+  animation-delay: 0.02s;
+}
+#navigation .navbtn:nth-child(3) {
+  animation-delay: 0.04s;
+}
+#navigation .navbtn:nth-child(4) {
+  animation-delay: 0.06s;
+}
+#navigation .navbtn:nth-child(5) {
+  animation-delay: 0.08s;
+}
+#navigation .navbtn:nth-child(n + 6) {
+  animation-delay: 0.1s;
+}
+@keyframes tile-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+  }
+}
+.sidebar:not(.open) .navbtn {
+  animation: none;
+}
+
+@media (max-width: 720px) {
+  .sidebar,
+  .sidebar.open {
+    top: 8px;
+    left: 8px;
+    width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+    padding: 14px 12px 16px;
+    border-radius: 26px;
+  }
+  .sidebar .navbtn,
+  .sidebar .navbtn.active {
+    min-height: 86px;
+    font-size: 11.5px;
+  }
+  .toplogo-name {
+    display: none;
+  }
+  .menubtn {
+    width: 44px;
+    height: 44px;
+  }
+  .menubtn svg {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .sidebar .navbtn,
+  .menubtn,
+  .menubtn .mb-rows rect {
+    animation: none !important;
+    transition: none !important;
+  }
+}
