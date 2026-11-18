@@ -138,6 +138,72 @@ export async function loadAll() {
   snapshot();
   lastLoad = Date.now();
 }
+/* ---------- computer lab: live seat availability for everyone ---------- */
+const sameJSON = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+const bookingSig = list =>
+  list
+    .filter(b => b.date === today())
+    .map(b => [b.id, b.seat, b.status, b.studentId])
+    .sort((a, b) => String(a[0]).localeCompare(String(b[0])));
+/**
+ * Pull the latest unavailable seats and today's bookings from the server.
+ * Updates S.db in place and marks the rows as synced (so save() won't push
+ * them back). Returns true when anything changed.
+ */
+export async function syncLab() {
+  if (!S.sb || !S.profile || syncing) return false;
+  await syncQ;
+  const t = today();
+  const [un, own, seats] = await Promise.all([
+    S.sb.from('records').select('data').eq('collection', 'meta').eq('key', 'labUnavailable').maybeSingle(),
+    S.sb.from('records').select('key,student_id,data').eq('collection', 'labBookings').eq('data->>date', t),
+    S.profile.role === 'Student' ? S.sb.rpc('lab_seats', { d: t }) : Promise.resolve({ data: [] }),
+  ]);
+  for (const r of [un, own, seats]) if (r.error) throw r.error;
+  if (syncing) return false; // a local change started meanwhile — the next poll catches up
+  const list = [...new Set((un.data?.data?.list || []).map(Number))].sort((a, b) => a - b);
+  const before = [[...S.db.lab.unavailable].sort((a, b) => a - b), bookingSig(S.db.lab.bookings)];
+  S.db.lab.unavailable = list;
+  synced.set('meta|labUnavailable', JSON.stringify([null, { list }]));
+  const fresh = (own.data || []).map(r => r.data);
+  S.db.lab.bookings = S.db.lab.bookings.filter(b => b.date !== t && !b._pseudo).concat(fresh);
+  fresh.forEach(b => synced.set('labBookings|' + b.id, JSON.stringify([b.studentId ?? null, b])));
+  // today's bookings that disappeared on the server are no longer "synced" either
+  [...synced.keys()].forEach(k => {
+    if (k.startsWith('labBookings|') && !S.db.lab.bookings.some(b => 'labBookings|' + b.id === k))
+      synced.delete(k);
+  });
+  (seats.data || []).forEach(s => {
+    if (!s.mine)
+      S.db.lab.bookings.push({
+        id: 'p' + s.seat,
+        seat: s.seat,
+        studentId: -1,
+        date: t,
+        status: s.status,
+        _pseudo: true,
+      });
+  });
+  return !sameJSON(before, [list, bookingSig(S.db.lab.bookings)]);
+}
+/** While a lab page is open, poll every few seconds and redraw when seats change. */
+let labTimer = 0;
+export function watchLab(isLabPage) {
+  if (labTimer) return;
+  labTimer = setInterval(async () => {
+    if (!isLabPage()) {
+      clearInterval(labTimer);
+      labTimer = 0;
+      return;
+    }
+    if (document.hidden || sceneBusy() || $('overlay').innerHTML) return;
+    try {
+      if (await syncLab()) render();
+    } catch (e) {
+      console.error(e);
+    }
+  }, 6000);
+}
 export function friendlyError(e) {
   const m = String(e?.message || e || '');
   if (e?.code === '23505' || /duplicate key/.test(m))

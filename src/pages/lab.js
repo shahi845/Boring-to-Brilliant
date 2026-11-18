@@ -1,8 +1,10 @@
 import { PAGES } from '../app/registry.js';
-import { go } from '../app/router.js';
+import { go, render } from '../app/router.js';
 import { notify, resolveRef } from '../lib/notifications.js';
 import { actorName, canManageLab, me } from '../lib/permissions.js';
-import { save } from '../lib/store.js';
+import { save, syncLab, watchLab } from '../lib/store.js';
+const onLabPage = () =>
+  (S.page === 'Lab Pass' || S.page === 'Computer Lab') && !!document.querySelector('#content');
 import { avatar, esc, fmtDate, nextId, rel, sClass, sName, stamp, today } from '../lib/utils.js';
 import { S } from '../state.js';
 import { btn, call, calm, card, heading, itemRow, tabs, tag } from '../ui/components.js';
@@ -69,6 +71,7 @@ export function seatMap(mode) {
   );
 }
 PAGES['Lab Pass'] = () => {
+  watchLab(onLabPage);
   const h = heading('Lab pass', '40 seats in the computer lab. Pick one in seconds.') + tabs();
   if (S.section === 'Seat Map') return h + labStats() + labSceneMarkup(labCtx);
   const p = myPass(),
@@ -146,9 +149,16 @@ const labCtx = {
   passHTML: (p, fresh) => labPassHTML(p, fresh),
   book: n => bookNow(n),
 };
-/** Book a seat straight from the scene — sitting down to try the seat is the confirmation step. */
-export function bookNow(n) {
+/** Book a seat straight from the scene — sitting down to try the seat is the confirmation step.
+ *  Checks the latest seat list on the server first, so a seat the Lab Charge just
+ *  marked unavailable (or another student just took) can't be booked. */
+export async function bookNow(n) {
   const fail = msg => (toast(msg, 'err'), msg);
+  try {
+    await syncLab();
+  } catch (e) {
+    console.error(e);
+  }
   if (S.db.lab.unavailable.includes(n)) return fail('Seat ' + n + ' is unavailable');
   if (seatBooking(n)) return fail('Seat ' + n + ' was just taken — pick another');
   if (myPass()) return fail('You already have a pass for today');
@@ -228,6 +238,7 @@ export function cancelPass(id) {
   );
 }
 PAGES['Computer Lab'] = () => {
+  watchLab(onLabPage);
   const h =
     heading(
       'Computer lab',
@@ -332,10 +343,20 @@ export function seatManage(n) {
       ? 'This seat is marked unavailable. Make it available for booking again?'
       : 'This seat is free. Mark it unavailable (e.g. under maintenance)?',
     un ? 'Make available' : 'Mark unavailable',
-    () => {
+    async () => {
+      // start from the latest list so changes by other staff are never overwritten
+      try {
+        await syncLab();
+      } catch (e) {
+        console.error(e);
+      }
       if (un) S.db.lab.unavailable = S.db.lab.unavailable.filter(x => x !== n);
-      else if (!seatBooking(n)) S.db.lab.unavailable.push(n);
-      commit('Seat ' + n + (un ? ' is available again' : ' marked unavailable'));
+      else if (seatBooking(n))
+        return (render(), toast('Seat ' + n + ' was just booked — release the pass first', 'err'));
+      else if (!S.db.lab.unavailable.includes(n)) S.db.lab.unavailable.push(n);
+      commit(
+        'Seat ' + n + (un ? ' is available again' : ' marked unavailable — hidden from booking for everyone'),
+      );
     },
   );
 }

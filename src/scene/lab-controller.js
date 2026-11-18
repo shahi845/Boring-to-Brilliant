@@ -4,7 +4,7 @@
    computer → confirm → celebration + digital lab pass.
    The page passes a small context object so this file has no data logic:
      ctx.seats() → [{n,state}]   ctx.pass() → today's booking or undefined
-     ctx.book(n) → booking | error string    ctx.mode() → 'Instant' | 'Approval'
+     ctx.book(n) → Promise<booking | error string>   ctx.mode() → 'Instant' | 'Approval'
      ctx.passHTML(booking, fresh) → HTML for the lab pass card
    ========================================================================== */
 import { Kid } from './rig.js';
@@ -180,10 +180,18 @@ export function labSceneReset() {
 
 export async function labSceneConfirm() {
   if (ui.busy || ui.phase !== 'seated') return;
-  const r = ctx.book(ui.seat);
-  if (typeof r === 'string') {
-    ui.phase = 'idle';
-    ui.seat = 0;
+  ui.busy = true;
+  let r;
+  try {
+    r = await busyWhile(() => ctx.book(ui.seat)); // checks the live seat list first
+  } finally {
+    ui.busy = false;
+  }
+  if (!r || typeof r === 'string') {
+    // seat was taken or marked unavailable meanwhile: back to the entrance with fresh seats
+    Object.assign(ui, { phase: 'idle', seat: 0, sitAt: 0 });
+    kid.place(...G.start).pose('wave');
+    kid.flip = 1;
     paint();
     return;
   }
