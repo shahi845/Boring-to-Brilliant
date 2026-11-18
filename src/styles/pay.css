@@ -1,0 +1,195 @@
+/* ===== Online fee payment ===== */
+.paysheet {
+  display: grid;
+  gap: 12px;
+}
+.pay-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: linear-gradient(125deg, #0e9f9a, #1cb0f6);
+  color: #fff;
+  box-shadow: 0 5px 0 #0a7a76;
+}
+.pay-head .hero-eyebrow {
+  color: #e8fffb;
+}
+.pay-head h2 {
+  margin: 4px 0 2px;
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+.pay-head p {
+  margin: 0;
+  opacity: 0.95;
+}
+.pay-to {
+  display: grid;
+  text-align: right;
+  background: #ffffff26;
+  border-radius: 14px;
+  padding: 8px 12px;
+}
+.pay-to span,
+.pay-to small {
+  font-size: 11px;
+  opacity: 0.9;
+}
+.pay-method {
+  border: 2px solid var(--line);
+  border-bottom-width: 5px;
+  border-radius: 20px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 12px;
+}
+.pay-mhead {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.pay-ico {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+  background: var(--pale);
+  flex-shrink: 0;
+}
+.pay-big {
+  width: 100%;
+  font-size: 17px;
+  padding: 14px;
+}
+.pay-secure {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+  text-align: center;
+}
+.pay-upi {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+.pay-qr {
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  padding: 8px;
+  width: 190px;
+  height: 190px;
+}
+.pay-qr svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.pay-qr.small {
+  width: 120px;
+  height: 120px;
+}
+.pay-upi-side ol {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  font-size: 13px;
+  display: grid;
+  gap: 4px;
+}
+.pay-upiid {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+.pay-upiid span {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 800;
+}
+.pay-upiid b {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+.pay-open {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+.pay-utr {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  border-top: 2px dashed var(--line);
+  padding-top: 12px;
+}
+.pay-utr label {
+  flex: 1 1 220px;
+  display: grid;
+  gap: 4px;
+  font-weight: 800;
+  font-size: 13px;
+}
+.pay-office {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 2px 4px;
+}
+.pay-preview {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+.paid-ok {
+  text-align: center;
+  padding: 10px 6px;
+}
+.paid-tick {
+  width: 76px;
+  height: 76px;
+  margin: 4px auto 10px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 38px;
+  font-weight: 900;
+  color: #fff;
+  background: #22b98b;
+  box-shadow: 0 6px 0 #18a876;
+  animation: pass-pop 0.55s cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+.spinner.small {
+  width: 22px;
+  height: 22px;
+  border-width: 3px;
+}
+.pay-setup {
+  margin-top: 0;
+  line-height: 1.8;
+}
+@media (max-width: 600px) {
+  .pay-upi {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .pay-qr {
+    width: 220px;
+    height: 220px;
+  }
+  .pay-to {
+    text-align: left;
+  }
+}

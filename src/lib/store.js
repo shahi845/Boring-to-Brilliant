@@ -25,6 +25,7 @@ export const COLLS = [
   'forms',
   'announcements',
   'admissions',
+  'payments',
 ];
 export const loginEmail = id => String(id).trim().toLowerCase() + '@ourcampus.app';
 export function emptyDB() {
@@ -47,6 +48,7 @@ export function emptyDB() {
     forms: [],
     announcements: [],
     admissions: [],
+    payments: [],
     notifications: [],
     libStatus: {},
     lab: { unavailable: [], bookings: [] },
@@ -89,7 +91,7 @@ export function fromRows(rows, notes) {
       else if (r.key === 'labUnavailable') D.lab.unavailable = d.list || [];
     }
   });
-  COLLS.forEach(c => D[c].sort((a, b) => a.id - b.id));
+  COLLS.forEach(c => D[c].sort((a, b) => a.id - b.id || String(a.id).localeCompare(String(b.id))));
   D.lab.bookings.sort((a, b) => a.id - b.id);
   D.notifications = notes.map(n => ({
     ...n.data,

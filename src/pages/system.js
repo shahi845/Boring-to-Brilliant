@@ -17,6 +17,7 @@ import { S } from '../state.js';
 import { btn, call, calm, card, heading, itemRow, table, tabs, tag } from '../ui/components.js';
 import { toast } from '../ui/feedback.js';
 import { F, commit, formHTML } from '../ui/forms.js';
+import { paymentSettingsHTML } from './payments.js';
 /* ==========================================================================
    REPORTS, ANNOUNCEMENTS, SETTINGS
    ========================================================================== */
@@ -258,6 +259,7 @@ PAGES.Settings = () => {
         ),
       )
     );
+  if (S.section === 'Payments') return h + paymentSettingsHTML();
   if (S.section === 'Workflow')
     return (
       h +

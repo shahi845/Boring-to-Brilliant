@@ -72,6 +72,44 @@ export function createSupabaseAdmin({ supabaseUrl, serviceKey, fetchImpl = fetch
     async deleteUser(userId) {
       return call(`/auth/v1/admin/users/${userId}`, { method: 'DELETE' });
     },
+    /** One record's data (or null). */
+    async getRecord(collection, key) {
+      const rows = await call(
+        `/rest/v1/records?collection=eq.${encodeURIComponent(collection)}&key=eq.${encodeURIComponent(key)}&select=data`,
+      );
+      return rows?.[0]?.data || null;
+    },
+    async listRecords(collection) {
+      const rows = await call(`/rest/v1/records?collection=eq.${encodeURIComponent(collection)}&select=data`);
+      return (rows || []).map(r => r.data);
+    },
+    /** Insert or replace a record ({collection, key, student_id, data}). */
+    async upsertRecord(row) {
+      return call('/rest/v1/records?on_conflict=collection,key', {
+        method: 'POST',
+        body: row,
+        headers: { Prefer: 'resolution=merge-duplicates,return=minimal' },
+      });
+    },
+    /** Insert notifications ({audience:[…], data:{text,icon,link,…}}). */
+    async insertNotifications(list) {
+      const at = new Intl.DateTimeFormat('sv-SE', {
+        timeZone: 'Asia/Kolkata',
+        dateStyle: 'short',
+        timeStyle: 'short',
+      }).format(new Date());
+      return call('/rest/v1/notifications', {
+        method: 'POST',
+        body: list.map((n, i) => ({
+          id: Date.now() * 10 + i,
+          audience: n.audience,
+          data: { icon: '🔔', link: null, ref: '', action: false, kind: '', at, ...n.data },
+          read_by: [],
+          handled: false,
+        })),
+        headers: { Prefer: 'return=minimal' },
+      });
+    },
     async countRecords(collection, filter = '') {
       const res = await fetchImpl(
         `${supabaseUrl}/rest/v1/records?collection=eq.${encodeURIComponent(collection)}${filter}&select=key`,

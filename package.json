@@ -4,7 +4,9 @@
   "private": true,
   "description": "OURCAMPUS — role-based campus management: attendance, leave, requests, fees, lab and library.",
   "type": "module",
-  "engines": { "node": ">=20.6" },
+  "engines": {
+    "node": ">=20.6"
+  },
   "scripts": {
     "dev": "vite",
     "server": "node --env-file=.env --watch server/index.js",
@@ -19,7 +21,8 @@
     "design:export": "node scripts/export-design.mjs"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.47.10"
+    "@supabase/supabase-js": "^2.47.10",
+    "qrcode-generator": "^1.4.4"
   },
   "devDependencies": {
     "prettier": "^3.4.2",

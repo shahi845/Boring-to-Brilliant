@@ -1,7 +1,7 @@
 import { FORMS, PAGES } from '../app/registry.js';
 import { go, render } from '../app/router.js';
 import { leaders, notify, resolveRef } from '../lib/notifications.js';
-import { canDecide, me } from '../lib/permissions.js';
+import { actorName, canDecide, me } from '../lib/permissions.js';
 import {
   $,
   addDays,
@@ -22,6 +22,7 @@ import { S } from '../state.js';
 import { btn, call, calm, card, heading, itemRow, table, tabs, tag } from '../ui/components.js';
 import { mhead, modal, toast } from '../ui/feedback.js';
 import { F, commit, formHTML } from '../ui/forms.js';
+import { feePaymentPending, paymentsAdminHTML } from './payments.js';
 import { Chips, wizardHTML } from '../ui/wizard.js';
 /* ==========================================================================
    FEES — students see status; Principal/VP authorize adjustments
@@ -41,14 +42,15 @@ PAGES.Fees = () => {
       return (
         heading('Fees', 'Your fee status at a glance.') +
         tabs() +
-        `<div class="play-hero" style="margin-bottom:16px"><div class="hero-copy"><div class="hero-eyebrow">💳 OUTSTANDING</div><h2>${money(due)}</h2><p>${open.length ? plural(open.length, 'fee') + ' to pay. Pay at the office; your receipt appears here.' : 'You’re fully paid up. 🎉'}</p></div></div>` +
+        `<div class="play-hero" style="margin-bottom:16px"><div class="hero-copy"><div class="hero-eyebrow">💳 OUTSTANDING</div><h2>${money(due)}</h2><p>${open.length ? plural(open.length, 'fee') + ' to pay. Pay online with UPI or card, or at the office — your receipt appears here.' : 'You’re fully paid up. 🎉'}</p></div></div>` +
         (open.length
           ? card(
               'To pay',
               open
                 .map(f => {
                   const st = feeStatus(f),
-                    task = S.db.feeTasks.find(x => x.feeId === f.id && x.status === 'Pending');
+                    task = S.db.feeTasks.find(x => x.feeId === f.id && x.status === 'Pending'),
+                    upiWait = feePaymentPending(f.id);
                   return itemRow({
                     icon: `<span class="taskicon t-${st === 'Overdue' ? 'red' : 'orange'}" style="width:40px;height:40px;font-size:19px">💳</span>`,
                     title: esc(f.category) + ' · ' + money(f.amount),
@@ -56,8 +58,16 @@ PAGES.Fees = () => {
                       (st === 'Overdue' ? 'Was due ' : 'Due ') +
                       fmtDate(f.due) +
                       (f.concession ? ' · concession ' + money(f.concession) + ' applied' : '') +
-                      (task ? ' · ' + task.kind.toLowerCase() + ' request under review' : ''),
-                    right: tag(st) + (task ? '' : ' ' + btn('Need more time?', call('extModal', f.id), 'sm')),
+                      (task ? ' · ' + task.kind.toLowerCase() + ' request under review' : '') +
+                      (upiWait
+                        ? ' · UPI payment (UTR ' + esc(upiWait.utr) + ') being confirmed by the office'
+                        : ''),
+                    right: upiWait
+                      ? tag('Confirming')
+                      : tag(st) +
+                        ' ' +
+                        btn('Pay now', call('payNow', f.id), 'sm primary') +
+                        (task ? '' : ' ' + btn('More time?', call('extModal', f.id), 'sm')),
                   });
                 })
                 .join(''),
@@ -112,6 +122,15 @@ PAGES.Fees = () => {
       )
     );
   }
+  if (S.section === 'Online Payments')
+    return (
+      heading(
+        'Fees',
+        'Online payments by UPI, card and net banking. Every payment is saved in the database.',
+      ) +
+      tabs() +
+      paymentsAdminHTML()
+    );
   if (S.section === 'Assign Fee')
     return (
       heading('Fees', 'Assign a fee to one student or a whole class.') +
@@ -180,10 +199,11 @@ FORMS.fee = v => {
         due: v.due,
         status: 'Pending',
       });
-      notify('student:' + id, 'New fee: ' + v.category + ' · ' + money(amt) + ' due ' + fmtDate(v.due), {
-        icon: '💳',
-        link: ['Fees', 'Status'],
-      });
+      notify(
+        'student:' + id,
+        'New fee: ' + v.category + ' · ' + money(amt) + ' due ' + fmtDate(v.due) + ' — tap to pay online',
+        { icon: '💳', link: ['Fees', 'Status'] },
+      );
     });
   commit(
     'Fee assigned to ' +
@@ -305,6 +325,27 @@ FORMS.pay = v => {
   if (!f || f.status === 'Paid') return 'Already paid';
   const n = 1 + Math.max(1100, ...S.db.fees.map(x => +String(x.receipt || '').replace(/\D/g, '') || 0));
   Object.assign(f, { status: 'Paid', paidAt: today(), method: v.method, payRef: v.ref, receipt: 'R-' + n });
+  S.db.payments.push({
+    id: 'office_' + nextId(S.db.fees),
+    feeId: f.id,
+    studentId: f.studentId,
+    category: f.category,
+    amount: +f.amount,
+    method: v.method + ' (office)',
+    payRef: v.ref,
+    status: 'Paid',
+    receipt: 'R-' + n,
+    createdAt: stamp(),
+    paidAt: stamp(),
+    confirmedBy: actorName(),
+  });
+  S.db.payments
+    .filter(p => +p.feeId === f.id && p.status === 'Pending')
+    .forEach(p => {
+      p.status = 'Rejected';
+      p.note = 'Paid at the office instead';
+      resolveRef('pay:' + p.id);
+    });
   S.db.feeTasks
     .filter(t => t.feeId === f.id && t.status === 'Pending')
     .forEach(t => {

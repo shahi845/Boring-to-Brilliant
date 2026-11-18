@@ -9,6 +9,8 @@ export function migrate() {
   S.db.libStatus ||= {};
   S.db.lab ||= { unavailable: [], bookings: [] };
   S.db.seating ||= {};
+  S.db.payments ||= [];
+  s.payments ||= { upiId: '', payee: '' };
   s.classTeachers ||= {};
   S.db.staff.forEach(x => {
     x.positions ||= [];

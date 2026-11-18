@@ -12,6 +12,8 @@ import { HttpError, SECURITY_HEADERS, send } from './lib/http.js';
 import { createRateLimiter } from './lib/rateLimit.js';
 import { createSupabaseAdmin } from './lib/supabase.js';
 import { accountsRoute } from './routes/accounts.js';
+import { paymentsRoute } from './routes/payments.js';
+import { createRazorpay } from './lib/razorpay.js';
 import { statsRoute } from './routes/stats.js';
 
 const MIME = {
@@ -29,15 +31,17 @@ const MIME = {
 /** Request handler shared by the standalone server (createApp) and the Vercel function (api/index.js). */
 export function createHandler(cfg, { fetchImpl = fetch, log = console } = {}) {
   const admin = createSupabaseAdmin({ ...cfg, fetchImpl });
+  const razorpay = createRazorpay({ keyId: cfg.razorpayKeyId, keySecret: cfg.razorpayKeySecret, fetchImpl });
   const limiter = createRateLimiter(cfg.rateLimit);
   const audit = (action, ctx, target) =>
     log.info?.(JSON.stringify({ t: new Date().toISOString(), action, by: ctx.profile.login_id, target }));
   const csp = [
     "default-src 'self'",
-    `connect-src 'self' ${cfg.supabaseUrl} ${cfg.supabaseUrl.replace('https://', 'wss://')}`,
-    "img-src 'self' data:",
+    `connect-src 'self' ${cfg.supabaseUrl} ${cfg.supabaseUrl.replace('https://', 'wss://')} https://api.razorpay.com https://lumberjack.razorpay.com`,
+    "img-src 'self' data: https://cdn.razorpay.com",
     "style-src 'self' 'unsafe-inline'",
-    "script-src 'self' 'unsafe-inline'", // inline handlers in templates — see docs/SECURITY.md
+    "script-src 'self' 'unsafe-inline' https://checkout.razorpay.com", // inline handlers in templates — see docs/SECURITY.md
+    'frame-src https://api.razorpay.com https://checkout.razorpay.com',
     "frame-ancestors 'none'",
   ].join('; ');
 
@@ -93,6 +97,7 @@ export function createHandler(cfg, { fetchImpl = fetch, log = console } = {}) {
       const [, , resource, ...parts] = url.pathname.split('/');
       const ctx = { admin, cfg, parts, audit };
       if (resource === 'accounts') return await accountsRoute(req, res, ctx);
+      if (resource === 'payments') return await paymentsRoute(req, res, { ...ctx, razorpay });
       if (resource === 'stats' && req.method === 'GET' && !parts.length)
         return await statsRoute(req, res, ctx);
       throw new HttpError(404, 'Not found');

@@ -39,6 +39,7 @@ import * as m29 from './ui/search.js';
 import * as m30 from './ui/theme.js';
 import * as m31 from './ui/wizard.js';
 import * as m32 from './pages/benches.js';
+import * as m33 from './pages/payments.js';
 import { bootAuth } from './lib/auth.js';
 import { emptyDB, initBackgroundSync } from './lib/store.js';
 import { initRouter } from './app/router.js';
@@ -80,6 +81,7 @@ Object.assign(
   m30,
   m31,
   m32,
+  m33,
 );
 
 try {
